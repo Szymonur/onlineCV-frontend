@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "research_grants",
+  "info": {
+    "singularName": "research-grant",
+    "pluralName": "research-grants",
+    "displayName": "Research grant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

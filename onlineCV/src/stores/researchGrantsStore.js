@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useDataStore = defineStore('dataStore', {
+export const useResearchGrantStore = defineStore('researchGrant', {
   state: () => ({
     data: [],
     loading: false,
@@ -16,11 +16,17 @@ export const useDataStore = defineStore('dataStore', {
       this.loading = true
       this.error = null
       try {
-        const response = await fetch('http://localhost:1337/api/abouts') // Replace with your API URL
+        const response = await fetch(`${import.meta.env.VITE_SERWER}research-grants`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
+          },
+        })
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const result = await response.json()
-        this.data = result.data // Assuming the API response has a "data" array
+        this.data = result.data
       } catch (err) {
         this.error = err.message
       } finally {

@@ -16,7 +16,16 @@ export const useDataStore = defineStore('dataStore', {
       this.loading = true
       this.error = null
       try {
-        const response = await fetch('http://localhost:1337/api/abouts') // Replace with your API URL
+        const response = await fetch(
+          `${import.meta.env.VITE_SERWER}/api/abouts?populate=profile_picture`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
+            },
+          },
+        ) // Replace with your API URL
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const result = await response.json()

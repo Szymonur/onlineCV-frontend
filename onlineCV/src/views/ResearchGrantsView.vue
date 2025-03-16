@@ -15,8 +15,10 @@ onMounted(() => {
       <div v-if="ResearchGrantStore.loading">Loading...</div>
       <div v-else-if="ResearchGrantStore.error">{{ ResearchGrantStore.error }}</div>
       <div v-else class="projects-container">
-        <h1>Research grants</h1>
         <ul>
+          <li class="project-card">
+            <h1>Research grants</h1>
+          </li>
           <li v-for="grant in ResearchGrantStore.data" :key="grant.id" class="project-card">
             <h2>"{{ grant.title }}"</h2>
             <div class="project-card-date">{{ grant.date }}</div>
@@ -37,7 +39,6 @@ onMounted(() => {
   display: flex;
 }
 .projects-container {
-  max-width: 900px;
   margin: auto;
   font-family: Arial, sans-serif;
 }
@@ -45,7 +46,6 @@ onMounted(() => {
   font-weight: 300;
 }
 .project-card-date {
-  /* font-size: 18px; */
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -64,8 +64,12 @@ onMounted(() => {
 .project-card p {
   margin: 5px 0;
 }
+ul {
+  list-style: none;
+}
 
 h1 {
-  padding: 15px 40px 0 40px;
+  padding: 15px 40px 0 0px;
+  text-align: start;
 }
 </style>

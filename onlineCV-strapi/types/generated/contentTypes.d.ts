@@ -384,13 +384,19 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    department: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
+    email: Schema.Attribute.Email;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    profile_picture: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -400,6 +406,7 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
 export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
   collectionName: 'conferences';
   info: {
+    description: '';
     displayName: 'Conference';
     pluralName: 'conferences';
     singularName: 'conference';
@@ -412,7 +419,7 @@ export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
-    description: Schema.Attribute.Blocks;
+    link: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -420,12 +427,9 @@ export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.String;
-    media: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    topic: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

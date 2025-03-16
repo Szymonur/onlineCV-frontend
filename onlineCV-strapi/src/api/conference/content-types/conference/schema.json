@@ -4,14 +4,15 @@
   "info": {
     "singularName": "conference",
     "pluralName": "conferences",
-    "displayName": "Conference"
+    "displayName": "Conference",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "text"
     },
     "location": {
       "type": "string"
@@ -19,18 +20,11 @@
     "date": {
       "type": "date"
     },
-    "media": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true
+    "topic": {
+      "type": "text"
     },
-    "description": {
-      "type": "blocks"
+    "link": {
+      "type": "text"
     }
   }
 }

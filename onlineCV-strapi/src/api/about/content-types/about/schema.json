@@ -12,10 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "description": {
-      "type": "blocks"
+    "name": {
+      "type": "string"
     },
-    "image": {
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "profile_picture": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -27,7 +36,10 @@
       ]
     },
     "title": {
-      "type": "richtext"
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
     }
   }
 }

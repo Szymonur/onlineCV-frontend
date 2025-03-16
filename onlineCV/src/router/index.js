@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import PublicationsView from '@/views/PublicationsView.vue'
-import ArticlesView from '@/views/ArticlesView.vue'
-import ResearchGrantsView from '@/views/ResearchGrantsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/HomeView.vue'),
+      redirect: '/about',
     },
     {
       path: '/about',
@@ -20,19 +16,25 @@ const router = createRouter({
     {
       path: '/publications',
       name: 'publications',
+      redirect: '/publications/articles',
       component: () => import('@/views/PublicationsView.vue'),
       children: [
         {
-          path: 'articles', // Child route for publications
+          path: 'articles',
           name: 'articles',
           component: () => import('@/views/ArticlesView.vue'),
         },
         {
-          path: 'research_grants', // Child route for publications
+          path: 'research_grants',
           name: 'research_grants',
           component: () => import('@/views/ResearchGrantsView.vue'),
         },
       ],
+    },
+    {
+      path: '/conferences',
+      name: 'conferences',
+      component: () => import('@/views/ConferencesView.vue'),
     },
   ],
 })

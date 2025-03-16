@@ -16,7 +16,7 @@ export const useArticlesStore = defineStore('articlesStore', {
       this.loading = true
       this.error = null
       try {
-        const response = await fetch('../public/googleScholar.json')
+        const response = await fetch('/googleScholar.json')
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const result = await response.json()

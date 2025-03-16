@@ -16,7 +16,7 @@ export const useResearchGrantStore = defineStore('researchGrant', {
       this.loading = true
       this.error = null
       try {
-        const response = await fetch(`${import.meta.env.VITE_SERWER}research-grants`, {
+        const response = await fetch(`${import.meta.env.VITE_SERWER}/api/research-grants`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

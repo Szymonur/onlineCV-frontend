@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_test_display_name_s",
+  "info": {
+    "displayName": "test display name "
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -29,7 +29,7 @@ nav {
   font-size: 1.25rem;
   color: #000;
   border-bottom: 2px solid black;
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 2rem 0.75rem 40px;
 }
 nav div {
   display: flex;

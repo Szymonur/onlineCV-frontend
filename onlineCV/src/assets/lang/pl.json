@@ -8,5 +8,12 @@
   "articles": "Artykuły",
   "about": "O mnie",
   "publicatons": "Publikacje",
-  "conferences": "Konferencje"
+  "conferences": "Konferencje",
+  "read_more": "Czytaj więcej",
+  "date": "Data",
+  "citations": "Cytowania",
+  "all_time": "Wszytkie",
+  "since": "od",
+  "citations_per_year": "Liczba cytowań w roku",
+  "co_authors": "Współautorzy"
 }

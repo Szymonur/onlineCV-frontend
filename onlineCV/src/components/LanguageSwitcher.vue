@@ -54,7 +54,7 @@ onUnmounted(() => {
 })
 </script>
 
-<style>
+<style scoped>
 .language-switcher {
   position: relative;
   display: inline-block;
@@ -90,6 +90,7 @@ onUnmounted(() => {
 
 .dropdown li {
   padding: 10px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s;
 }

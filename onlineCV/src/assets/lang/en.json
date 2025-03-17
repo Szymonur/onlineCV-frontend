@@ -8,5 +8,12 @@
   "articles": "Articles",
   "about": "About",
   "publicatons": "Publicatons",
-  "conferences": "Conferences"
+  "conferences": "Conferences",
+  "read_more": "Read more",
+  "date": "Date",
+  "citations": "Citations",
+  "all_time": "All time",
+  "since": "from",
+  "citations_per_year": "Citations per year",
+  "co_authors": "Co-authors"
 }

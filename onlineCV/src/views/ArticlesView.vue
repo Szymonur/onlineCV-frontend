@@ -1,6 +1,8 @@
 <script setup>
 import { useArticlesStore } from '@/stores/articlesStore.js'
 import { useLanguageStore } from '@/stores/languageStore'
+import CitationsSideBar from '@/components/CitationsSideBar.vue'
+
 import { onMounted } from 'vue'
 
 const ArticlesStore = useArticlesStore()
@@ -15,7 +17,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 <template>
   <div class="c-articles">
     <div>
-      <div v-if="ArticlesStore.loading">Loading...</div>
+      <div v-if="ArticlesStore.loading">{{ t('loading') }}</div>
       <div v-else-if="ArticlesStore.error">{{ ArticlesStore.error }}</div>
       <div v-else class="articles-container">
         <ul>
@@ -59,12 +61,18 @@ const t = (key) => languageStore.currentTranslation[key] || key
         </ul>
       </div>
     </div>
+    <CitationsSideBar />
   </div>
 </template>
 
-<style>
+<style scoped>
+.c-articles {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 2rem;
+}
 .articles-container {
-  margin: auto;
   font-family: Arial, sans-serif;
 }
 

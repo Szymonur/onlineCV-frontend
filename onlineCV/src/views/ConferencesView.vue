@@ -16,6 +16,7 @@ watch(
     ConferenceStore.fetchData()
   },
 )
+const t = (key) => languageStore.currentTranslation[key] || key
 </script>
 
 <template>
@@ -30,11 +31,11 @@ watch(
         <ul>
           <li class="conference-card">
             <div>
-              <h1>Conferences</h1>
+              <h1>{{ t('conferences') }}</h1>
             </div>
             <div class="conference-card-right conference-card-right-header">
               <div>
-                <p>Year</p>
+                <p class="conference-card-right-date">{{ t('date') }}</p>
               </div>
             </div>
           </li>
@@ -53,12 +54,12 @@ watch(
               <div v-if="conference.link">
                 <p>
                   <a class="conference-card-right-link" :href="conference.link" target="_blank"
-                    >{{ Link }} Read more
+                    >{{ Link }} {{ t('read_more') }}
                   </a>
                 </p>
               </div>
               <div>
-                <p>{{ conference.date }}</p>
+                <p class="conference-card-right-date">{{ conference.date }}</p>
               </div>
             </div>
           </li>
@@ -81,6 +82,7 @@ watch(
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
 }
 .conference-card-right-header div {
@@ -105,6 +107,10 @@ watch(
 .conference-card a {
   color: #007bff;
   text-decoration: none;
+}
+.conference-card-right-date {
+  text-wrap: nowrap;
+  width: 77px;
 }
 
 .conference-card a:hover {

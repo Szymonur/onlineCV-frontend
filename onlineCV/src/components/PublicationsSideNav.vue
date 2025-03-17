@@ -13,7 +13,7 @@ import { RouterLink } from 'vue-router'
 <style scoped>
 nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   /* gap: 2rem; */
   min-width: 220px;
   font-size: 1.25rem;
@@ -26,6 +26,6 @@ nav a {
   padding: 0.75rem 2rem;
 }
 :deep(.router-link-active) {
-  color: #007bff; /* Blue color for active link */
+  color: #4e7e00; /* Blue color for active link */
 }
 </style>

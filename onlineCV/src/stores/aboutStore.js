@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useLanguageStore } from './languageStore'
 
 export const useDataStore = defineStore('dataStore', {
   state: () => ({
@@ -13,11 +14,12 @@ export const useDataStore = defineStore('dataStore', {
 
   actions: {
     async fetchData() {
+      const languageStore = useLanguageStore()
       this.loading = true
       this.error = null
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_SERWER}/api/abouts?populate=profile_picture`,
+          `${import.meta.env.VITE_SERWER}/api/abouts?populate=profile_picture&locale=${languageStore.locale}`,
           {
             method: 'GET',
             headers: {
@@ -25,7 +27,7 @@ export const useDataStore = defineStore('dataStore', {
               Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
             },
           },
-        ) // Replace with your API URL
+        )
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const result = await response.json()

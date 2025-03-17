@@ -1,14 +1,21 @@
 <script setup>
-import { onMounted } from 'vue'
 import { useDataStore } from '@/stores/aboutStore'
+import { useLanguageStore } from '@/stores/languageStore'
+import { watch, onMounted } from 'vue'
 
 const dataStore = useDataStore()
 const serverUrl = import.meta.env.VITE_SERWER
+const languageStore = useLanguageStore()
 
 onMounted(() => {
   dataStore.fetchData()
 })
-
+watch(
+  () => languageStore.locale,
+  () => {
+    dataStore.fetchData()
+  },
+)
 </script>
 
 <template>
@@ -34,7 +41,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .c-about {
   width: 100%;
   height: 100%;
@@ -63,7 +70,7 @@ onMounted(() => {
   justify-content: center;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: bold;
   padding: 0;
 }

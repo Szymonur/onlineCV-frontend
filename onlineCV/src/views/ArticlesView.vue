@@ -1,12 +1,15 @@
 <script setup>
 import { useArticlesStore } from '@/stores/articlesStore.js'
+import { useLanguageStore } from '@/stores/languageStore'
 import { onMounted } from 'vue'
 
 const ArticlesStore = useArticlesStore()
+const languageStore = useLanguageStore()
 
 onMounted(() => {
   ArticlesStore.fetchData()
 })
+const t = (key) => languageStore.currentTranslation[key] || key
 </script>
 
 <template>
@@ -18,14 +21,14 @@ onMounted(() => {
         <ul>
           <li class="article-card">
             <div>
-              <h1>Articles</h1>
+              <h1>{{ t('articles') }}</h1>
             </div>
-            <div class="article-card-right article-card-right-header">
+            <div class="article-card-right-header">
               <div>
-                <p>Cited by</p>
+                <p>{{ t('cited_by') }}</p>
               </div>
               <div>
-                <p>Year</p>
+                <p>{{ t('year') }}</p>
               </div>
             </div>
           </li>
@@ -40,7 +43,12 @@ onMounted(() => {
             <div class="article-card-right">
               <div>
                 <p>
-                  <a :href="article.cited_by.link" target="_blank">{{ article.cited_by.value }}</a>
+                  <a
+                    class="article-card-right-cited"
+                    :href="article.cited_by.link"
+                    target="_blank"
+                    >{{ article.cited_by.value }}</a
+                  >
                 </p>
               </div>
               <div>
@@ -55,10 +63,6 @@ onMounted(() => {
 </template>
 
 <style>
-.c-publications {
-  display: flex;
-  padding: 0 40px 0 0;
-}
 .articles-container {
   margin: auto;
   font-family: Arial, sans-serif;
@@ -67,8 +71,14 @@ onMounted(() => {
 .article-card {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
+  gap: 1rem;
   display: flex;
   justify-content: space-between;
+}
+.article-card-right-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
 }
 .article-card-right-header div {
   display: flex;
@@ -76,7 +86,9 @@ onMounted(() => {
 }
 .article-card-right {
   display: flex;
+  align-items: center;
   gap: 2rem;
+  height: min-content;
 }
 .article-card h2 {
   margin: 0;
@@ -87,6 +99,9 @@ onMounted(() => {
   color: #007bff;
   text-decoration: none;
 }
+.article-card-right-cited {
+  font-size: 19px;
+}
 
 .article-card a:hover {
   text-decoration: underline;
@@ -94,5 +109,4 @@ onMounted(() => {
 h1 {
   padding: 15px 40px 0 0px;
 }
-
 </style>

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useLanguageStore } from './languageStore'
 
 export const useResearchGrantStore = defineStore('researchGrant', {
   state: () => ({
@@ -13,16 +14,20 @@ export const useResearchGrantStore = defineStore('researchGrant', {
 
   actions: {
     async fetchData() {
+      const languageStore = useLanguageStore()
       this.loading = true
       this.error = null
       try {
-        const response = await fetch(`${import.meta.env.VITE_SERWER}/api/research-grants`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
+        const response = await fetch(
+          `${import.meta.env.VITE_SERWER}/api/research-grants?locale=${languageStore.locale}`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
+            },
           },
-        })
+        )
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
 
         const result = await response.json()

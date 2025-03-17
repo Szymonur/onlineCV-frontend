@@ -1,23 +1,32 @@
 <script setup>
 import { useResearchGrantStore } from '@/stores/researchGrantsStore.js'
-import { onMounted } from 'vue'
+import { useLanguageStore } from '@/stores/languageStore'
+import { watch, onMounted } from 'vue'
 
 const ResearchGrantStore = useResearchGrantStore()
+const languageStore = useLanguageStore()
 
 onMounted(() => {
   ResearchGrantStore.fetchData()
 })
+watch(
+  () => languageStore.locale,
+  () => {
+    ResearchGrantStore.fetchData()
+  },
+)
+const t = (key) => languageStore.currentTranslation[key] || key
 </script>
 
 <template>
   <div class="c-research-projects">
     <div>
-      <div v-if="ResearchGrantStore.loading">Loading...</div>
+      <div v-if="ResearchGrantStore.loading">{{ t('loading') }}</div>
       <div v-else-if="ResearchGrantStore.error">{{ ResearchGrantStore.error }}</div>
       <div v-else class="projects-container">
         <ul>
           <li class="project-card">
-            <h1>Research grants</h1>
+            <h1>{{ t('research_grants') }}</h1>
           </li>
           <li v-for="grant in ResearchGrantStore.data" :key="grant.id" class="project-card">
             <h2>"{{ grant.title }}"</h2>
@@ -25,7 +34,7 @@ onMounted(() => {
             <div v-if="grant.description" class="project-card-description">
               {{ grant.description }}
             </div>
-            <div v-else>No description available.</div>
+            <div v-else>{{ t('noDescription') }}</div>
             <div>{{ grant.role }}</div>
           </li>
         </ul>

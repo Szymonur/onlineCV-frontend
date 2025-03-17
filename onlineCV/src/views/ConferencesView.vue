@@ -1,12 +1,21 @@
 <script setup>
 import { useConferenceStore } from '@/stores/conferenceStore.js'
-import { onMounted } from 'vue'
+import { useLanguageStore } from '@/stores/languageStore'
+
+import { onMounted, watch } from 'vue'
 
 const ConferenceStore = useConferenceStore()
+const languageStore = useLanguageStore()
 
 onMounted(() => {
   ConferenceStore.fetchData()
 })
+watch(
+  () => languageStore.locale,
+  () => {
+    ConferenceStore.fetchData()
+  },
+)
 </script>
 
 <template>

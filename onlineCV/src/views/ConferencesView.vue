@@ -73,10 +73,6 @@ const t = (key) => languageStore.currentTranslation[key] || key
 .c-conferences {
   padding: 0 40px 0 0;
 }
-.conferences-container {
-  margin: auto;
-  font-family: Arial, sans-serif;
-}
 
 .conference-card {
   border-bottom: 1px solid #ddd;

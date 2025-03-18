@@ -51,6 +51,7 @@ const coAuthors = computed(() => {
 
 const chartOptions = {
   responsive: true,
+  maintainAspectRatio: true,
   plugins: {
     legend: {
       display: true,
@@ -127,7 +128,8 @@ const chartOptions = {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 30%;
+  min-width: 200px;
   padding-top: 94px;
 }
 
@@ -136,9 +138,15 @@ const chartOptions = {
 }
 
 .chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 600px;
   margin-top: 20px;
+}
+.chart-container canvas {
+  width: 98% !important;
+  height: auto !important;
 }
 
 table {

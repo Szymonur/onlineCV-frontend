@@ -72,9 +72,6 @@ const t = (key) => languageStore.currentTranslation[key] || key
   align-items: start;
   gap: 2rem;
 }
-.articles-container {
-  font-family: Arial, sans-serif;
-}
 
 .article-card {
   border-bottom: 1px solid #ddd;

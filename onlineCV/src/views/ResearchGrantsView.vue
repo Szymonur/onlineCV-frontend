@@ -49,7 +49,6 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 .projects-container {
   margin: auto;
-  font-family: Arial, sans-serif;
 }
 .project-card-description {
   font-weight: 300;

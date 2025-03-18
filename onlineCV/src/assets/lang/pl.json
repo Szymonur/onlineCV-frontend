@@ -15,5 +15,10 @@
   "all_time": "Wszytkie",
   "since": "od",
   "citations_per_year": "Liczba cytowań w roku",
-  "co_authors": "Współautorzy"
+  "co_authors": "Współautorzy",
+  "education": "Edukacja",
+  "additional": "Dodatkowe",
+  "location": "Miejsce",
+  "summer_school_courses": "Kursy w ramach szkoły letniej",
+  "as_participant": "jako uczestnik"
 }

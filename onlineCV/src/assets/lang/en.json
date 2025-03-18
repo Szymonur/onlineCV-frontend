@@ -15,5 +15,10 @@
   "all_time": "All time",
   "since": "from",
   "citations_per_year": "Citations per year",
-  "co_authors": "Co-authors"
+  "co_authors": "Co-authors",
+  "education": "Education",
+  "additional": "Additional",
+  "location": "Location",
+  "summer_school_courses": "Summer School courses",
+  "as_participant": "as a participant"
 }

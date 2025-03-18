@@ -51,7 +51,13 @@
         "serpapi_link": "https://serpapi.com/search.json?cites=12364905769910323635&engine=google_scholar&hl=en",
         "cites_id": "12364905769910323635"
       },
-      "year": "2023"
+      "year": "2023",
+      "keywords": [
+        { "text": "AI", "value": 5 },
+        { "text": "Machine Learning", "value": 3 },
+        { "text": "Deep Learning", "value": 2 },
+        { "text": "Neural Networks", "value": 4 }
+      ]
     },
     {
       "title": "Polish Contemporary Migration: From Co‐migrants to Project ME",
@@ -65,7 +71,13 @@
         "serpapi_link": "https://serpapi.com/search.json?cites=10176613767740150311&engine=google_scholar&hl=en",
         "cites_id": "10176613767740150311"
       },
-      "year": "2014"
+      "year": "2014",
+      "keywords": [
+        { "text": "losowe", "value": 5 },
+        { "text": "słowa", "value": 3 },
+        { "text": "kluczowe", "value": 2 },
+        { "text": "Neural Networks", "value": 4 }
+      ]
     },
     {
       "title": "Migracje i transfery kapitału społecznego",
@@ -79,7 +91,13 @@
         "serpapi_link": "https://serpapi.com/search.json?cites=2149141859359742041&engine=google_scholar&hl=en",
         "cites_id": "2149141859359742041"
       },
-      "year": "2016"
+      "year": "2016",
+      "keywords": [
+        { "text": "losowe", "value": 5 },
+        { "text": "słowa", "value": 3 },
+        { "text": "kluczowe", "value": 2 },
+        { "text": "test", "value": 1 }
+      ]
     },
     {
       "title": "Social reception and inclusion of refugees from Ukraine",

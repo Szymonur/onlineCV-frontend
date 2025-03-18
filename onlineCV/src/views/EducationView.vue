@@ -1,8 +1,7 @@
 <script setup>
 import { useEducationStore } from '@/stores/educationStore.js'
 import { useLanguageStore } from '@/stores/languageStore'
-
-import { onMounted } from 'vue'
+import { watch, onMounted } from 'vue'
 
 const EducationStore = useEducationStore()
 const languageStore = useLanguageStore()
@@ -10,6 +9,12 @@ const languageStore = useLanguageStore()
 onMounted(() => {
   EducationStore.fetchData()
 })
+watch(
+  () => languageStore.locale,
+  () => {
+    EducationStore.fetchData()
+  },
+)
 const t = (key) => languageStore.currentTranslation[key] || key
 </script>
 

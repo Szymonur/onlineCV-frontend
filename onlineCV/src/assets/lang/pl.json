@@ -20,5 +20,8 @@
   "additional": "Dodatkowe",
   "location": "Miejsce",
   "summer_school_courses": "Kursy w ramach szkoły letniej",
-  "as_participant": "jako uczestnik"
+  "as_participant": "jako uczestnik",
+  "as_lecturer": "jako wykładowca",
+  "employment": "Praca",
+  "invited_lectures": "Wykłady na zaproszenie"
 }

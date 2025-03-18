@@ -15,6 +15,9 @@ const t = (key) => languageStore.currentTranslation[key] || key
       <RouterLink to="/publications">{{ t('publicatons') }}</RouterLink>
       <RouterLink to="/conferences">{{ t('conferences') }}</RouterLink>
       <RouterLink to="/education">{{ t('education') }}</RouterLink>
+      <RouterLink to="/employment">{{ t('employment') }}</RouterLink>
+      <RouterLink to="/invited_lectures">{{ t('invited_lectures') }}</RouterLink>
+
     </div>
     <LanguageSwitcher />
   </nav>
@@ -38,6 +41,27 @@ nav div {
   align-items: center;
   gap: 2rem;
 }
+nav div a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+nav div a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+nav div a:hover::after {
+  width: 100%;
+}
+
 .do_not_display {
   display: none;
 }

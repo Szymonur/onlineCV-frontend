@@ -111,7 +111,7 @@ const chartOptions = {
                 </div>
               </div>
               <div>
-                <span class="co-author-affiliation">({{ author.affiliations }})</span>
+                <span class="co-author-affiliation">{{ author.affiliations }}</span>
               </div>
             </li>
           </ul>
@@ -129,12 +129,12 @@ const chartOptions = {
   align-items: center;
   flex-direction: column;
   max-width: 30%;
-  min-width: 200px;
+  min-width: 150px;
   padding-top: 94px;
 }
 
 .citatons-side-bar-container {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .chart-container {
@@ -145,7 +145,7 @@ const chartOptions = {
   margin-top: 20px;
 }
 .chart-container canvas {
-  width: 98% !important;
+  min-width: 100%;
   height: auto !important;
 }
 

@@ -1,7 +1,9 @@
 <script setup>
 import { useArticlesStore } from '@/stores/articlesStore.js'
 import { useLanguageStore } from '@/stores/languageStore'
-import CitationsSideBar from '@/components/CitationsSideBar.vue'
+import WordCloud from '@/components/WordCloud.vue'
+
+// import CitationsSideBar from '@/components/CitationsSideBar.vue'
 
 import { onMounted } from 'vue'
 
@@ -26,9 +28,9 @@ const t = (key) => languageStore.currentTranslation[key] || key
               <h1>{{ t('articles') }}</h1>
             </div>
             <div class="article-card-right-header">
-              <div>
+              <!-- <div>
                 <p>{{ t('cited_by') }}</p>
-              </div>
+              </div> -->
               <div>
                 <p>{{ t('year') }}</p>
               </div>
@@ -43,7 +45,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
               <p>{{ article.publication }}</p>
             </div>
             <div class="article-card-right">
-              <div>
+              <!-- <div>
                 <p>
                   <a
                     class="article-card-right-cited"
@@ -52,6 +54,10 @@ const t = (key) => languageStore.currentTranslation[key] || key
                     >{{ article.cited_by.value }}</a
                   >
                 </p>
+              </div> -->
+              <div>
+                <!-- Word Cloud for Each Article -->
+                <WordCloud v-if="article.keywords" :keywords="article.keywords" />
               </div>
               <div>
                 <p>{{ article.year }}</p>
@@ -61,7 +67,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
         </ul>
       </div>
     </div>
-    <CitationsSideBar />
+    <!-- <CitationsSideBar /> -->
   </div>
 </template>
 

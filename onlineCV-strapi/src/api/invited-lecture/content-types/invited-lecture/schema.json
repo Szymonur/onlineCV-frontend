@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invited_lectures",
+  "info": {
+    "singularName": "invited-lecture",
+    "pluralName": "invited-lectures",
+    "displayName": "Invited lectures",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "university": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

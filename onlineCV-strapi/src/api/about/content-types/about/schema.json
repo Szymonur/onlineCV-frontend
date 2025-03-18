@@ -79,6 +79,12 @@
           "localized": true
         }
       }
+    },
+    "orcid": {
+      "type": "string"
+    },
+    "researchgate": {
+      "type": "string"
     }
   }
 }

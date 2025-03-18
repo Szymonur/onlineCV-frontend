@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "educations",
+  "collectionName": "employments",
   "info": {
-    "singularName": "education",
-    "pluralName": "educations",
-    "displayName": "education",
+    "singularName": "employment",
+    "pluralName": "employments",
+    "displayName": "Employment",
     "description": ""
   },
   "options": {
@@ -24,7 +24,7 @@
         }
       }
     },
-    "university": {
+    "role": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -32,16 +32,8 @@
         }
       }
     },
-    "degree": {
+    "company": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "if_additional": {
-      "type": "boolean",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -58,6 +50,14 @@
     },
     "description": {
       "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "is_additional": {
+      "type": "boolean",
       "pluginOptions": {
         "i18n": {
           "localized": true

@@ -13,6 +13,6 @@ import PublicationsSideNav from '@/components/PublicationsSideNav.vue'
 <style>
 .c-publications {
   display: flex;
-  padding: 0 20px 0 0;
+  padding: 0 40px 0 0;
 }
 </style>

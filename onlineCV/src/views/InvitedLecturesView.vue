@@ -25,11 +25,10 @@ const t = (key) => languageStore.currentTranslation[key] || key
       <div v-if="InvitedLectureStore.loading">Loading...</div>
       <div v-else-if="InvitedLectureStore.error">{{ InvitedLectureStore.error }}</div>
       <div v-else class="invitedLectures-container">
-        <pre>{{ InvitedLectureStore }}</pre>
         <ul>
           <li class="invitedLecture-card">
             <div>
-              <h1>{{ t('invitedLectures') }}</h1>
+              <h1>{{ t('invited_lectures') }}</h1>
             </div>
             <div class="invitedLecture-card-right invitedLecture-card-right-header">
               <div>
@@ -43,19 +42,16 @@ const t = (key) => languageStore.currentTranslation[key] || key
             class="invitedLecture-card"
           >
             <div>
-              <h2>{{ invitedLecture.topic }}</h2>
+              <h2>
+                <a :href="invitedLecture.link" target="_blank">{{ invitedLecture.topic }}</a>
+              </h2>
               <h2>{{ invitedLecture.university }}</h2>
               <p>{{ invitedLecture.description }}</p>
             </div>
             <div class="invitedLecture-card-right">
-              <div v-if="invitedLecture.link">
+              <div v-if="invitedLecture.link && !invitedLecture.topic">
                 <p>
-                  <a
-                    class="invitedLecture-card-right-link"
-                    :href="invitedLecture.link"
-                    target="_blank"
-                    >{{ Link }} {{ t('read_more') }}
-                  </a>
+                  <a class="invitedLecture-card-right-link">{{ Link }} {{ t('read_more') }} </a>
                 </p>
               </div>
               <div>
@@ -94,6 +90,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 .invitedLecture-card-right-link {
   color: #007bff;
+  text-wrap: nowrap;
 }
 .invitedLecture-card h2 {
   margin: 0;
@@ -102,16 +99,13 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
 .invitedLecture-card a {
   color: #007bff;
-  text-decoration: none;
 }
 .invitedLecture-card-right-date {
   text-wrap: nowrap;
+  text-align: center;
   width: 77px;
 }
 
-.invitedLecture-card a:hover {
-  text-decoration: underline;
-}
 h1 {
   padding: 15px 40px 0 0px;
 }

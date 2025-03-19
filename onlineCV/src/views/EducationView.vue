@@ -155,9 +155,6 @@ const t = (key) => languageStore.currentTranslation[key] || key
   width: 90px;
 }
 
-.education-card a:hover {
-  text-decoration: underline;
-}
 h1 {
   padding: 15px 40px 0 0px;
 }

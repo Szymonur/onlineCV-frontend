@@ -153,16 +153,13 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 .Employment-card-right-date {
   text-wrap: nowrap;
-  width: 77px;
+  width: 100px;
 }
 .Employment-card-right-location {
   text-wrap: nowrap;
   width: 90px;
 }
 
-.Employment-card a:hover {
-  text-decoration: underline;
-}
 h1 {
   padding: 15px 40px 0 0px;
 }

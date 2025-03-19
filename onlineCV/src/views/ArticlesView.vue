@@ -114,9 +114,6 @@ const t = (key) => languageStore.currentTranslation[key] || key
   font-size: 19px;
 }
 
-.article-card a:hover {
-  text-decoration: underline;
-}
 h1 {
   padding: 15px 40px 0 0px;
 }

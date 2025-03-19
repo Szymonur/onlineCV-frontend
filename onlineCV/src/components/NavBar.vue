@@ -17,7 +17,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
       <RouterLink to="/education">{{ t('education') }}</RouterLink>
       <RouterLink to="/employment">{{ t('employment') }}</RouterLink>
       <RouterLink to="/invited_lectures">{{ t('invited_lectures') }}</RouterLink>
-
+      <RouterLink to="/didactics">{{ t('didactics') }}</RouterLink>
     </div>
     <LanguageSwitcher />
   </nav>

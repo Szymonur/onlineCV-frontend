@@ -15,8 +15,27 @@ a {
   color: #000;
 }
 a:hover {
-  text-decoration: underline;
-  color: #444;
+  text-decoration: none;
+}
+a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 @media (hover: hover) {

@@ -1,4 +1,7 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import { useLanguageStore } from '@/stores/languageStore'
+
 const props = defineProps({
   links: {
     type: Array,
@@ -6,11 +9,36 @@ const props = defineProps({
     default: () => [],
   },
 })
+
+const languageStore = useLanguageStore()
+const t = (key) => languageStore.currentTranslation[key] || key
+
+const activeSlug = ref(null)
+
+// Funkcja do ustawiania aktywnej sekcji
+const setActive = (slug) => {
+  activeSlug.value = slug
+}
+
+// Sprawdzanie aktywnej sekcji na podstawie URL po załadowaniu strony
+onMounted(() => {
+  const hash = window.location.hash.replace('#', '')
+  if (hash) {
+    activeSlug.value = hash
+  }
+})
 </script>
 
 <template>
   <nav>
-    <a v-for="link in props.links" :key="link.id" :id="link.id" href="#">
+    <a
+      v-for="link in props.links"
+      :key="link.slug"
+      :id="link.slug"
+      :href="'#' + link.slug"
+      :class="{ active: activeSlug === link.slug }"
+      @click="setActive(link.slug)"
+    >
       {{ link.name }}
     </a>
   </nav>
@@ -35,8 +63,16 @@ nav a {
   width: min-content;
   text-wrap: nowrap;
   display: inline-block;
+  transition: color 0.3s;
 }
 
+/* Styl aktywnego linku */
+nav a.active {
+  color: #4e7e00;
+  /* font-weight: bold; */
+}
+
+/* Podkreślenie na hover */
 nav a::after {
   content: '';
   position: absolute;
@@ -52,6 +88,7 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* Usunięcie podkreślenia, gdy link nie jest hoverowany */
 nav a:not(:hover)::after {
   width: 0;
 }

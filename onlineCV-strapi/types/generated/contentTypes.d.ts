@@ -444,6 +444,35 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiConferenceBanerConferenceBaner
+  extends Struct.SingleTypeSchema {
+  collectionName: 'conference_baners';
+  info: {
+    displayName: 'Conference baner';
+    pluralName: 'conference-baners';
+    singularName: 'conference-baner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::conference-baner.conference-baner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
   collectionName: 'conferences';
   info: {
@@ -500,6 +529,37 @@ export interface ApiConferenceConference extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDidacticDidactic extends Struct.CollectionTypeSchema {
+  collectionName: 'didactics';
+  info: {
+    description: '';
+    displayName: 'Didactic';
+    pluralName: 'didactics';
+    singularName: 'didactic';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    link: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::didactic.didactic'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1276,7 +1336,9 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::conference-baner.conference-baner': ApiConferenceBanerConferenceBaner;
       'api::conference.conference': ApiConferenceConference;
+      'api::didactic.didactic': ApiDidacticDidactic;
       'api::education.education': ApiEducationEducation;
       'api::employment.employment': ApiEmploymentEmployment;
       'api::global.global': ApiGlobalGlobal;

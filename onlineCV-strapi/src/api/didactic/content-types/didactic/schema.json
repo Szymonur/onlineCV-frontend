@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "didactics",
+  "info": {
+    "singularName": "didactic",
+    "pluralName": "didactics",
+    "displayName": "Didactic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

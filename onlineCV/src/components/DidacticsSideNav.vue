@@ -68,7 +68,7 @@ nav a {
 
 /* Styl aktywnego linku */
 nav a.active {
-  color: #4e7e00;
+  color: var(--nav);
   /* font-weight: bold; */
 }
 
@@ -91,5 +91,17 @@ nav a:hover::after {
 /* Usunięcie podkreślenia, gdy link nie jest hoverowany */
 nav a:not(:hover)::after {
   width: 0;
+}
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column !important;
+    font-size: 1rem;
+    color: #000;
+    border-right: 0px solid black;
+    border-bottom: 2px solid black;
+    padding: 0.25rem 2rem;
+    width: 100vw;
+  }
 }
 </style>

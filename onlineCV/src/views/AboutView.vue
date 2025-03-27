@@ -149,4 +149,27 @@ a:hover .icon {
   align-items: center;
   gap: 5px;
 }
+@media (max-width: 768px) {
+  .c-about-top {
+    flex-direction: column;
+    gap: 0;
+  }
+  .c-about-top h1 {
+    text-align: center;
+    font-size: 2.75rem;
+  }
+  .c-about-top h2 {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .c-about-top-contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  .c-about-description {
+    padding: 0 8px;
+  }
+}
 </style>

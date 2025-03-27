@@ -130,7 +130,7 @@ html {
 /* Aktywna sekcja */
 .didactics-section.active {
   border-bottom: 3px solid transparent;
-  border-left: 6px solid #4e7e00;
+  border-left: 6px solid var(--nav);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -143,7 +143,7 @@ html {
 .didactics-section h1 {
   margin-bottom: 10px;
   font-size: 2rem;
-  color: #4e7e00;
+  color: var(--nav);
 }
 
 .didactics-section ul {
@@ -162,6 +162,20 @@ html {
 }
 
 li a {
-  color: #007bff;
+  color: var(--link);
+}
+@media (max-width: 768px) {
+  .didactics-container {
+    flex-direction: column;
+  }
+  .didactics-section h1 {
+    font-size: 1.5rem;
+  }
+  .didactics-section p {
+    font-size: 1rem;
+  }
+  .didactics-section a {
+    font-size: 1rem;
+  }
 }
 </style>

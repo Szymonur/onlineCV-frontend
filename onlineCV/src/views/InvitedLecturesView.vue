@@ -89,7 +89,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
   gap: 5rem;
 }
 .invitedLecture-card-right-link {
-  color: #007bff;
+  color: var(--link);
   text-wrap: nowrap;
 }
 .invitedLecture-card h2 {
@@ -98,7 +98,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 
 .invitedLecture-card a {
-  color: #007bff;
+  color: var(--link);
 }
 .invitedLecture-card-right-date {
   text-wrap: nowrap;

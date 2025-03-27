@@ -62,7 +62,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
           <li class="Employment-card">
             <div class="Employment-card-title">
               <h1>{{ t('summer_school_courses') }}</h1>
-              <h2>( {{ t('as_lecturer') }} )</h2>
+              <p>( {{ t('as_lecturer') }} )</p>
             </div>
             <div class="Employment-card-right Employment-card-right-header">
               <div>
@@ -140,7 +140,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
   gap: 2rem;
 }
 .Employment-card-right-link {
-  color: #007bff;
+  color: var(--link);
 }
 .Employment-card h2 {
   margin: 0;
@@ -148,7 +148,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 
 .Employment-card a {
-  color: #007bff;
+  color: var(--link);
   text-decoration: none;
 }
 .Employment-card-right-date {
@@ -162,5 +162,33 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
 h1 {
   padding: 15px 40px 0 0px;
+}
+
+@media (max-width: 768px) {
+  .Employment-card {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .Employment-card h2 {
+    font-size: 1.25rem;
+    text-align: left;
+    color: var(--nav);
+  }
+  .Employment-card-title {
+    flex-direction: column;
+    align-items: start;
+  }
+  .Employment-card-right-header {
+    display: none;
+  }
+  .Employment-card-right-location {
+    text-align: left;
+  }
+  .Employment-container {
+    margin: auto;
+    padding: 0 1.25rem 0 0;
+  }
 }
 </style>

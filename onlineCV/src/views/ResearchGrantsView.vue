@@ -46,14 +46,19 @@ const t = (key) => languageStore.currentTranslation[key] || key
 <style>
 .c-research-projects {
   display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 2rem;
 }
+
 .projects-container {
   margin: auto;
-
 }
+
 .project-card-description {
   font-weight: 300;
 }
+
 .project-card-date {
   font-weight: 500;
   margin-bottom: 10px;
@@ -62,6 +67,9 @@ const t = (key) => languageStore.currentTranslation[key] || key
 .project-card {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-card h2 {
@@ -73,6 +81,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 .project-card p {
   margin: 5px 0;
 }
+
 ul {
   list-style: none;
 }
@@ -80,5 +89,48 @@ ul {
 h1 {
   padding: 15px 40px 0 0px;
   text-align: start;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .c-research-projects {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-container {
+    width: 100%;
+  }
+
+  .project-card {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-card h1 {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  .project-card h2 {
+    font-size: 1rem;
+  }
+
+  .project-card-description {
+    font-size: 0.75rem;
+  }
+
+  .project-card-date {
+    font-size: 0.75rem;
+  }
+
+  .project-card p {
+    font-size: 0.75rem;
+  }
+
+  /* Hiding elements for mobile view */
+  .mobile-do-not-display {
+    display: none;
+  }
 }
 </style>

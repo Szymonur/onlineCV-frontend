@@ -114,7 +114,7 @@ const scrollToContent = () => {
   gap: 5rem;
 }
 .conference-card-right-link {
-  color: #007bff;
+  color: var(--link);
 }
 .conference-card h2 {
   margin: 0;
@@ -122,7 +122,7 @@ const scrollToContent = () => {
 }
 
 .conference-card a {
-  color: #007bff;
+  color: var(--link);
   text-decoration: none;
 }
 .conference-card-right-date {

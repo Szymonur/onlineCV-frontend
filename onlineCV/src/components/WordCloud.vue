@@ -1,30 +1,29 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, onUnmounted } from 'vue'
 import * as d3 from 'd3'
 import cloud from 'd3-cloud'
 
 const props = defineProps({
-  keywords: Array, // { text: "word", value: number }
+  keywords: Array,
 })
 
 const svgRef = ref(null)
-const width = 200 // Stała szerokość
-const height = 130 // Stała wysokość
+const width = 200
+const height = ref(window.innerWidth <= 768 ? 90 : 130) // Dynamiczna wysokość
 
 const drawWordCloud = () => {
   if (!props.keywords || props.keywords.length === 0) return
 
-  // Skalowanie wielkości czcionki tak, by zmieściły się wszystkie słowa
   const fontSizeScale = d3
     .scaleLinear()
     .domain([1, Math.max(...props.keywords.map((d) => d.value))])
-    .range([10, 20]) // Min/max wielkość czcionki
+    .range([10, 20])
 
   const layout = cloud()
-    .size([width, height])
+    .size([width, height.value])
     .words(props.keywords.map((d) => ({ text: d.text, size: fontSizeScale(d.value) })))
-    .padding(2) // Mniejsze odstępy
-    .rotate(() => (Math.random() > 0.4 ? 0 : 90)) // Mniej obrotów dla lepszej czytelności
+    .padding(2)
+    .rotate(() => (Math.random() > 0.4 ? 0 : 90))
     .fontSize((d) => d.size)
     .on('end', renderCloud)
 
@@ -32,9 +31,9 @@ const drawWordCloud = () => {
 
   function renderCloud(words) {
     const svg = d3.select(svgRef.value)
-    svg.selectAll('*').remove() // Usuwamy poprzednie dane przed rysowaniem nowej chmury
+    svg.selectAll('*').remove()
 
-    const g = svg.append('g').attr('transform', `translate(${width / 2}, ${height / 2})`)
+    const g = svg.append('g').attr('transform', `translate(${width / 2}, ${height.value / 2})`)
 
     g.selectAll('text')
       .data(words)
@@ -48,7 +47,21 @@ const drawWordCloud = () => {
   }
 }
 
-onMounted(drawWordCloud)
+// Aktualizacja wysokości przy zmianie rozmiaru okna
+const updateHeight = () => {
+  height.value = window.innerWidth <= 768 ? 90 : 130
+  drawWordCloud()
+}
+
+onMounted(() => {
+  drawWordCloud()
+  window.addEventListener('resize', updateHeight)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateHeight)
+})
+
 watch(() => props.keywords, drawWordCloud, { deep: true })
 </script>
 

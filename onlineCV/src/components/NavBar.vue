@@ -1,24 +1,34 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import { useLanguageStore } from '@/stores/languageStore'
 
 const languageStore = useLanguageStore()
-
 const t = (key) => languageStore.currentTranslation[key] || key
+const isMenuOpen = ref(false)
 </script>
 
 <template>
   <nav>
-    <div>
-      <RouterLink to="/about">{{ t('about') }}</RouterLink>
-      <RouterLink to="/publications">{{ t('publicatons') }}</RouterLink>
-      <RouterLink to="/conferences">{{ t('conferences') }}</RouterLink>
-      <RouterLink to="/education">{{ t('education') }}</RouterLink>
-      <RouterLink to="/employment">{{ t('employment') }}</RouterLink>
-      <RouterLink to="/invited_lectures">{{ t('invited_lectures') }}</RouterLink>
-      <RouterLink to="/didactics">{{ t('didactics') }}</RouterLink>
+    <div class="menu-toggle" @click="isMenuOpen = !isMenuOpen">
+      <span :class="{ open: isMenuOpen }"></span>
+      <span :class="{ open: isMenuOpen }"></span>
+      <span :class="{ open: isMenuOpen }"></span>
     </div>
+
+    <div class="menu-links" :class="{ open: isMenuOpen }">
+      <RouterLink to="/about" @click="isMenuOpen = false">{{ t('about') }}</RouterLink>
+      <RouterLink to="/publications" @click="isMenuOpen = false">{{ t('publicatons') }}</RouterLink>
+      <RouterLink to="/conferences" @click="isMenuOpen = false">{{ t('conferences') }}</RouterLink>
+      <RouterLink to="/education" @click="isMenuOpen = false">{{ t('education') }}</RouterLink>
+      <RouterLink to="/employment" @click="isMenuOpen = false">{{ t('employment') }}</RouterLink>
+      <RouterLink to="/invited_lectures" @click="isMenuOpen = false">{{
+        t('invited_lectures')
+      }}</RouterLink>
+      <RouterLink to="/didactics" @click="isMenuOpen = false">{{ t('didactics') }}</RouterLink>
+    </div>
+
     <LanguageSwitcher />
   </nav>
 </template>
@@ -28,26 +38,41 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  gap: 2rem;
-  font-size: 1.25rem;
-  color: #000;
-  border-bottom: 2px solid black;
-  padding: 0.75rem 2rem 0.75rem 40px;
-}
-nav div {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 2rem;
-}
-nav div a {
+  padding: 0.75rem 2rem;
+  border-bottom: 2px solid black;
   position: relative;
-  text-decoration: none;
-  color: black;
 }
 
-nav div a::after {
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: 0.3s;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  width: min-content;
+}
+
+.menu-links a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -58,15 +83,35 @@ nav div a::after {
   transition: width 0.3s ease-in-out;
 }
 
-nav div a:hover::after {
+.menu-links a:hover::after {
   width: 100%;
 }
 
-.do_not_display {
-  display: none;
-}
-
-:deep(.router-link-active) {
-  color: #4e7e00; /* Blue color for active link */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav {
+    flex-direction: row-reverse;
+  }
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
+  }
+  .menu-links a {
+    text-wrap: nowrap;
+  }
+  .menu-links.open {
+    display: flex;
+    align-items: end;
+    z-index: 999;
+  }
 }
 </style>

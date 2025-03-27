@@ -6,9 +6,9 @@ body,
 #app {
   margin: 0;
   padding: 0;
-  background-color: #eee;
+  /* background-color: #eee; */
   /* background-color: #96bcf1b0; */
-  color: #000;
+  /* color: #000; */
 }
 
 a {
@@ -43,4 +43,9 @@ a:hover::after {
 }
 
 @media (min-width: 1024px) {
+}
+@media (max-width: 768px) {
+  ul {
+    padding-left: 1.25rem;
+  }
 }

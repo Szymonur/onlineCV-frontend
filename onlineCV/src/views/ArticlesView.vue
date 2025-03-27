@@ -27,7 +27,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
             <div>
               <h1>{{ t('articles') }}</h1>
             </div>
-            <div class="article-card-right-header">
+            <div class="article-card-right-header mobile-do-not-display">
               <!-- <div>
                 <p>{{ t('cited_by') }}</p>
               </div> -->
@@ -59,7 +59,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
                 <!-- Word Cloud for Each Article -->
                 <WordCloud v-if="article.keywords" :keywords="article.keywords" />
               </div>
-              <div>
+              <div class="mobile-do-not-display">
                 <p>{{ article.year }}</p>
               </div>
             </div>
@@ -107,7 +107,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
 }
 
 .article-card a {
-  color: #007bff;
+  color: var(--link);
   text-decoration: none;
 }
 .article-card-right-cited {
@@ -116,5 +116,27 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
 h1 {
   padding: 15px 40px 0 0px;
+}
+@media (max-width: 768px) {
+  .article-card {
+    flex-direction: column;
+  }
+  .article-card h1 {
+    padding: 0;
+  }
+
+  .article-card a {
+    font-size: 1rem;
+  }
+  .article-card p {
+    font-size: 0.75rem;
+  }
+  .mobile-do-not-display {
+    display: none;
+  }
+  .article-card-right {
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

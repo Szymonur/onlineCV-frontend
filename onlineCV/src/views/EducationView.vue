@@ -57,7 +57,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
           <li class="education-card">
             <div class="education-card-title">
               <h1>{{ t('summer_school_courses') }}</h1>
-              <h2>( {{ t('as_participant') }} )</h2>
+              <p>( {{ t('as_participant') }} )</p>
             </div>
             <div class="education-card-right education-card-right-header">
               <div>
@@ -135,15 +135,16 @@ const t = (key) => languageStore.currentTranslation[key] || key
   gap: 2rem;
 }
 .education-card-right-link {
-  color: #007bff;
+  color: var(--link);
 }
 .education-card h2 {
   margin: 0;
   font-size: 1.2em;
+  color: var(--nav);
 }
 
 .education-card a {
-  color: #007bff;
+  color: var(--link);
   text-decoration: none;
 }
 .education-card-right-date {
@@ -157,5 +158,32 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
 h1 {
   padding: 15px 40px 0 0px;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .education-card h2 {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+  .education-card-title {
+    flex-direction: column;
+    align-items: start;
+  }
+  .education-card-right-header {
+    display: none;
+  }
+  .education-card-right-location {
+    text-align: left;
+  }
+  .education-container {
+    margin: auto;
+    padding: 0 1.25rem 0 0;
+  }
 }
 </style>

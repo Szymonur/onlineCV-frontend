@@ -50,15 +50,27 @@ nav a:hover::after {
 }
 
 :deep(.router-link-active) {
-  color: #4e7e00; /* Zielony kolor dla aktywnego linku */
+  color: var(--nav); /* Zielony kolor dla aktywnego linku */
 }
 
 :deep(.router-link-active)::after {
-  background-color: #4e7e00; /* Zielone podkreślenie dla aktywnego linku */
+  background-color: var(--nav); /* Zielone podkreślenie dla aktywnego linku */
   width: 100%; /* Podkreślenie na szerokość tekstu */
 }
 
 nav a:not(:hover)::after {
   width: 0; /* Podkreślenie znika po zjechaniu myszką */
+}
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column !important;
+    font-size: 1rem;
+    color: #000;
+    border-right: 0px solid black;
+    border-bottom: 2px solid black;
+    padding: 0.25rem 2rem;
+    width: 100vw;
+  }
 }
 </style>

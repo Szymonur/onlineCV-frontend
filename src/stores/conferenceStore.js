@@ -40,6 +40,7 @@ export const useConferenceStore = defineStore("conference", {
     },
 
     async fetchBannerData() {
+      if (this.hasData) return;
       this.loading = true;
       this.error = null;
       try {

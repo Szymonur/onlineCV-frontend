@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
-import { useLanguageStore } from './languageStore'
+import { defineStore } from "pinia";
+import { useLanguageStore } from "./languageStore";
 
-export const useEmploymentStore = defineStore('employment', {
+export const useEmploymentStore = defineStore("employment", {
   state: () => ({
     main: [],
     additional: [],
@@ -14,39 +14,37 @@ export const useEmploymentStore = defineStore('employment', {
   },
 
   actions: {
-    async fetchData() {
-      const languageStore = useLanguageStore()
-      this.loading = true
-      this.error = null
+    async fetchData(isLanguageChanged) {
+      if (this.hasData && !isLanguageChanged) return;
+      const languageStore = useLanguageStore();
+      this.loading = true;
+      this.error = null;
       try {
-        const response = await fetch(
-          `${import.meta.env.VITE_SERWER}/api/employments?locale=${languageStore.locale}`,
-          {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
-            },
+        const response = await fetch(`${import.meta.env.VITE_SERWER}/api/employments?locale=${languageStore.locale}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
           },
-        )
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
+        });
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-        const result = await response.json()
+        const result = await response.json();
         const sortedData = result.data.sort((a, b) => {
           const getYearValue = (year) => {
-            const match = year.match(/\d{4}/g)
-            return match ? parseInt(match[match.length - 1], 10) : 0
-          }
-          return getYearValue(b.year) - getYearValue(a.year)
-        })
+            const match = year.match(/\d{4}/g);
+            return match ? parseInt(match[match.length - 1], 10) : 0;
+          };
+          return getYearValue(b.year) - getYearValue(a.year);
+        });
 
-        this.main = sortedData.filter((item) => !item.is_additional)
-        this.additional = sortedData.filter((item) => item.is_additional)
+        this.main = sortedData.filter((item) => !item.is_additional);
+        this.additional = sortedData.filter((item) => item.is_additional);
       } catch (err) {
-        this.error = err.message
+        this.error = err.message;
       } finally {
-        this.loading = false
+        this.loading = false;
       }
     },
   },
-})
+});

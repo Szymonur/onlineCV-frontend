@@ -1,32 +1,32 @@
 <script setup>
-import { useResearchGrantStore } from '@/stores/researchGrantsStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import { watch, onMounted } from 'vue'
+import { useResearchGrantsStore } from "@/stores/researchGrantsStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import { watch, onMounted } from "vue";
 
-const ResearchGrantStore = useResearchGrantStore()
-const languageStore = useLanguageStore()
+const ResearchGrantStore = useResearchGrantsStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  ResearchGrantStore.fetchData()
-})
+  ResearchGrantStore.fetchData();
+});
 watch(
   () => languageStore.locale,
   () => {
-    ResearchGrantStore.fetchData()
-  },
-)
-const t = (key) => languageStore.currentTranslation[key] || key
+    ResearchGrantStore.fetchData();
+  }
+);
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <div class="c-research-projects">
     <div>
-      <div v-if="ResearchGrantStore.loading">{{ t('loading') }}</div>
+      <div v-if="ResearchGrantStore.loading">{{ t("loading") }}</div>
       <div v-else-if="ResearchGrantStore.error">{{ ResearchGrantStore.error }}</div>
       <div v-else class="projects-container">
         <ul>
           <li class="project-card">
-            <h1>{{ t('research_grants') }}</h1>
+            <h1>{{ t("research_grants") }}</h1>
           </li>
           <li v-for="grant in ResearchGrantStore.data" :key="grant.id" class="project-card">
             <h2>"{{ grant.title }}"</h2>
@@ -34,7 +34,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
             <div v-if="grant.description" class="project-card-description">
               {{ grant.description }}
             </div>
-            <div v-else>{{ t('noDescription') }}</div>
+            <div v-else>{{ t("noDescription") }}</div>
             <div>{{ grant.role }}</div>
           </li>
         </ul>
@@ -54,7 +54,10 @@ const t = (key) => languageStore.currentTranslation[key] || key
 .projects-container {
   margin: auto;
 }
-
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
 .project-card-description {
   font-weight: 300;
 }
@@ -103,7 +106,6 @@ h1 {
   }
 
   .project-card {
-    flex-direction: column;
     width: 100%;
   }
 

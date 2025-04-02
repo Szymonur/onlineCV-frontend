@@ -10,48 +10,46 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useLanguageStore } from '@/stores/languageStore'
-import { useResearchGrantStore } from '@/stores/researchGrantsStore'
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useLanguageStore } from "@/stores/languageStore";
+import { useResearchGrantsStore } from "@/stores/researchGrantsStore";
 
-const languageStore = useLanguageStore()
-const researchGrantStore = useResearchGrantStore()
-const isOpen = ref(false)
-const dropdownRef = ref(null)
+const languageStore = useLanguageStore();
+const researchGrantStore = useResearchGrantsStore();
+const isOpen = ref(false);
+const dropdownRef = ref(null);
 
 const languages = [
-  { code: 'en', label: '🇬🇧 English' },
-  { code: 'pl', label: '🇵🇱 Polski' },
-]
+  { code: "en", label: "🇬🇧 English" },
+  { code: "pl", label: "🇵🇱 Polski" },
+];
 
-const currentLanguage = computed(
-  () => languages.find((lang) => lang.code === languageStore.locale) || languages[0],
-)
+const currentLanguage = computed(() => languages.find((lang) => lang.code === languageStore.locale) || languages[0]);
 
 const toggleDropdown = () => {
-  isOpen.value = !isOpen.value
-}
+  isOpen.value = !isOpen.value;
+};
 
 const changeLanguage = (lang) => {
-  languageStore.setLanguage(lang)
-  researchGrantStore.fetchData()
-  isOpen.value = false
-}
+  languageStore.setLanguage(lang);
+  researchGrantStore.fetchData();
+  isOpen.value = false;
+};
 
 // Zamknięcie dropdowna po kliknięciu poza nim
 const closeDropdown = (event) => {
   if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
-    isOpen.value = false
+    isOpen.value = false;
   }
-}
+};
 
 onMounted(() => {
-  document.addEventListener('click', closeDropdown)
-})
+  document.addEventListener("click", closeDropdown);
+});
 
 onUnmounted(() => {
-  document.removeEventListener('click', closeDropdown)
-})
+  document.removeEventListener("click", closeDropdown);
+});
 </script>
 
 <style scoped>

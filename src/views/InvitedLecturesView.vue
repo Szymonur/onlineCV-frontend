@@ -1,22 +1,22 @@
 <script setup>
-import { useInvitedLectureStore } from '@/stores/invitedLecturesStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
+import { useInvitedLecturesStore } from "@/stores/invitedLecturesStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
 
-import { onMounted, watch } from 'vue'
+import { onMounted, watch } from "vue";
 
-const InvitedLectureStore = useInvitedLectureStore()
-const languageStore = useLanguageStore()
+const InvitedLectureStore = useInvitedLecturesStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  InvitedLectureStore.fetchData()
-})
+  InvitedLectureStore.fetchData();
+});
 watch(
   () => languageStore.locale,
   () => {
-    InvitedLectureStore.fetchData()
-  },
-)
-const t = (key) => languageStore.currentTranslation[key] || key
+    InvitedLectureStore.fetchData();
+  }
+);
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
@@ -28,19 +28,15 @@ const t = (key) => languageStore.currentTranslation[key] || key
         <ul>
           <li class="invitedLecture-card">
             <div>
-              <h1>{{ t('invited_lectures') }}</h1>
+              <h1>{{ t("invited_lectures") }}</h1>
             </div>
             <div class="invitedLecture-card-right invitedLecture-card-right-header">
               <div>
-                <p class="invitedLecture-card-right-date">{{ t('date') }}</p>
+                <p class="invitedLecture-card-right-date">{{ t("date") }}</p>
               </div>
             </div>
           </li>
-          <li
-            v-for="invitedLecture in InvitedLectureStore.data"
-            :key="invitedLecture.id"
-            class="invitedLecture-card"
-          >
+          <li v-for="invitedLecture in InvitedLectureStore.data" :key="invitedLecture.id" class="invitedLecture-card">
             <div>
               <h2>
                 <a :href="invitedLecture.link" target="_blank">{{ invitedLecture.topic }}</a>
@@ -51,7 +47,7 @@ const t = (key) => languageStore.currentTranslation[key] || key
             <div class="invitedLecture-card-right">
               <div v-if="invitedLecture.link && !invitedLecture.topic">
                 <p>
-                  <a class="invitedLecture-card-right-link">{{ Link }} {{ t('read_more') }} </a>
+                  <a class="invitedLecture-card-right-link">{{ Link }} {{ t("read_more") }} </a>
                 </p>
               </div>
               <div>

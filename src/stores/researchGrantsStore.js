@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
-import { useLanguageStore } from './languageStore'
+import { defineStore } from "pinia";
+import { useLanguageStore } from "./languageStore";
 
-export const useResearchGrantStore = defineStore('researchGrant', {
+export const useResearchGrantsStore = defineStore("researchGrant", {
   state: () => ({
     data: [],
     loading: false,
@@ -13,30 +13,31 @@ export const useResearchGrantStore = defineStore('researchGrant', {
   },
 
   actions: {
-    async fetchData() {
-      const languageStore = useLanguageStore()
-      this.loading = true
-      this.error = null
+    async fetchData(isLanguageChanged) {
+      if (this.hasData && !isLanguageChanged) return;
+      const languageStore = useLanguageStore();
+      this.loading = true;
+      this.error = null;
       try {
         const response = await fetch(
           `${import.meta.env.VITE_SERWER}/api/research-grants?locale=${languageStore.locale}`,
           {
-            method: 'GET',
+            method: "GET",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
               Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
             },
-          },
-        )
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
+          }
+        );
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-        const result = await response.json()
-        this.data = result.data
+        const result = await response.json();
+        this.data = result.data;
       } catch (err) {
-        this.error = err.message
+        this.error = err.message;
       } finally {
-        this.loading = false
+        this.loading = false;
       }
     },
   },
-})
+});

@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useCitationsStore = defineStore('citationsStore.', {
+export const useCitationsStore = defineStore("citationsStore.", {
   state: () => ({
     data: [],
     loading: false,
@@ -12,24 +12,25 @@ export const useCitationsStore = defineStore('citationsStore.', {
   },
 
   actions: {
-    async fetchData() {
-      this.loading = true
-      this.error = null
+    async fetchData(isLanguageChanged) {
+      if (this.hasData && !isLanguageChanged) return;
+      this.loading = true;
+      this.error = null;
       try {
-        const response = await fetch('/googleScholar.json')
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`)
+        const response = await fetch("/googleScholar.json");
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
-        const result = await response.json()
+        const result = await response.json();
         this.data = {
           co_authors: result.co_authors,
           table: result.cited_by.table,
           graph: result.cited_by.graph,
-        }
+        };
       } catch (err) {
-        this.error = err.message
+        this.error = err.message;
       } finally {
-        this.loading = false
+        this.loading = false;
       }
     },
   },
-})
+});

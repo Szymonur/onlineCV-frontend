@@ -1,25 +1,25 @@
 <script setup>
-import { useDataStore } from '@/stores/aboutStore'
-import { useLanguageStore } from '@/stores/languageStore'
-import { watch, onMounted } from 'vue'
+import { useAboutStore } from "@/stores/aboutStore";
+import { useLanguageStore } from "@/stores/languageStore";
+import { watch, onMounted } from "vue";
 
 // Import Font Awesome icons
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const dataStore = useDataStore()
-const serverUrl = import.meta.env.VITE_SERWER
-const languageStore = useLanguageStore()
+const dataStore = useAboutStore();
+const serverUrl = import.meta.env.VITE_SERWER;
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  dataStore.fetchData()
-})
+  dataStore.fetchData();
+});
 watch(
   () => languageStore.locale,
   () => {
-    dataStore.fetchData()
-  },
-)
+    dataStore.fetchData();
+  }
+);
 </script>
 
 <template>
@@ -50,8 +50,7 @@ watch(
               <a
                 v-if="dataStore.data[0].email"
                 :href="'mailto:' + dataStore.data[0].email"
-                class="flex items-center gap-2"
-              >
+                class="flex items-center gap-2">
                 <FontAwesomeIcon :icon="faEnvelope" class="icon" />
                 {{ dataStore.data[0].email }}
               </a>
@@ -60,8 +59,7 @@ watch(
                 v-if="dataStore.data[0].orcid"
                 :href="'https://orcid.org/' + dataStore.data[0].orcid"
                 target="_blank"
-                class="flex items-center gap-2"
-              >
+                class="flex items-center gap-2">
                 <img src="@/assets/icons/orcid.png" alt="" />
 
                 ORCID {{ dataStore.data[0].orcid }}
@@ -70,8 +68,7 @@ watch(
                 v-if="dataStore.data[0].researchgate"
                 :href="dataStore.data[0].researchgate"
                 target="_blank"
-                class="flex items-center gap-2"
-              >
+                class="flex items-center gap-2">
                 <img src="@/assets/icons/researchgate.png" alt="" />
                 ResearchGate
               </a>

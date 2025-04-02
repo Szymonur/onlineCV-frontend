@@ -1,45 +1,45 @@
 <script setup>
-import { ref, watch, onMounted, nextTick } from 'vue'
-import { useDidacticsStore } from '@/stores/didacticsStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import DidacticsSideNav from '@/components/DidacticsSideNav.vue'
+import { ref, watch, onMounted, nextTick } from "vue";
+import { useDidacticsStore } from "@/stores/didacticsStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import DidacticsSideNav from "@/components/DidacticsSideNav.vue";
 
-const DidacticsStore = useDidacticsStore()
-const languageStore = useLanguageStore()
-const activeSection = ref(null)
+const DidacticsStore = useDidacticsStore();
+const languageStore = useLanguageStore();
+const activeSection = ref(null);
 
 // Ręczne przewijanie zamiast domyślnego skakania
 const scrollToSection = async (slug) => {
-  await nextTick() // Poczekaj na aktualizację DOM
+  await nextTick(); // Poczekaj na aktualizację DOM
 
-  const section = document.getElementById(slug)
+  const section = document.getElementById(slug);
   if (section) {
-    activeSection.value = slug
-    history.pushState(null, '', `#${slug}`) // Aktualizacja URL bez skoku
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' }) // Płynne przewijanie
+    activeSection.value = slug;
+    history.pushState(null, "", `#${slug}`); // Aktualizacja URL bez skoku
+    section.scrollIntoView({ behavior: "smooth", block: "start" }); // Płynne przewijanie
   }
-}
+};
 
 // Funkcja do ustawiania aktywnej sekcji na podstawie hash w URL
 const setActiveSection = async () => {
-  const hash = window.location.hash.replace('#', '')
+  const hash = window.location.hash.replace("#", "");
   if (hash) {
-    scrollToSection(hash) // Przewiń do sekcji zamiast skakać
+    scrollToSection(hash); // Przewiń do sekcji zamiast skakać
   }
-}
+};
 
 // Obsługa kliknięcia w linki nawigacyjne
 const handleNavClick = (event, slug) => {
-  event.preventDefault() // Zablokowanie domyślnego skoku przeglądarki
-  scrollToSection(slug) // Płynne przewijanie
-}
+  event.preventDefault(); // Zablokowanie domyślnego skoku przeglądarki
+  scrollToSection(slug); // Płynne przewijanie
+};
 
 // Pobranie danych i ustawienie aktywnej sekcji po załadowaniu
 onMounted(() => {
-  DidacticsStore.fetchData()
-  setActiveSection()
-  window.addEventListener('hashchange', setActiveSection)
-})
+  DidacticsStore.fetchData();
+  setActiveSection();
+  window.addEventListener("hashchange", setActiveSection);
+});
 
 // Intersection Observer do wykrywania aktywnej sekcji podczas przewijania
 onMounted(() => {
@@ -47,40 +47,44 @@ onMounted(() => {
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          activeSection.value = entry.target.id
-          history.replaceState(null, '', `#${entry.target.id}`)
+          activeSection.value = entry.target.id;
+          history.replaceState(null, "", `#${entry.target.id}`);
         }
       }
     },
-    { threshold: 0.6 }, // Sekcja jest aktywna, jeśli przynajmniej 60% jest widoczne
-  )
+    { threshold: 0.6 } // Sekcja jest aktywna, jeśli przynajmniej 60% jest widoczne
+  );
 
-  document.querySelectorAll('.didactics-section').forEach((section) => {
-    observer.observe(section)
-  })
-})
+  document.querySelectorAll(".didactics-section").forEach((section) => {
+    observer.observe(section);
+  });
+});
 
 // Aktualizacja danych przy zmianie języka
 watch(
   () => languageStore.locale,
   () => {
-    DidacticsStore.fetchData()
-  },
-)
+    DidacticsStore.fetchData();
+  }
+);
 
-const t = (key) => languageStore.currentTranslation[key] || key
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <div class="c-didactics">
     <div>
-      <div v-if="DidacticsStore.loading">{{ t('loading') }}</div>
+      <div v-if="DidacticsStore.loading">{{ t("loading") }}</div>
       <div v-else-if="DidacticsStore.error">{{ DidacticsStore.error }}</div>
       <div v-else class="didactics-container">
         <DidacticsSideNav :links="DidacticsStore.groupedData" />
         <div class="didactics-content">
           <template v-for="(group, slug) in DidacticsStore.groupedData" :key="slug">
-            <div :id="slug" class="didactics-section" :class="{ active: activeSection === slug }">
+            <div
+              :id="slug"
+              class="didactics-section"
+              :class="{ active: activeSection === slug }"
+              @click="scrollToSection(slug)">
               <h1>{{ group.name }}</h1>
               <ul>
                 <li v-for="item in group.items" :key="item.id">

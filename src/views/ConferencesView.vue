@@ -1,34 +1,34 @@
 <script setup>
-import { useConferenceStore } from '@/stores/conferenceStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { useConferenceStore } from "@/stores/conferenceStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-import { onMounted, watch } from 'vue'
+import { onMounted, watch } from "vue";
 
-const ConferenceStore = useConferenceStore()
-const languageStore = useLanguageStore()
-const serverUrl = import.meta.env.VITE_SERWER
+const ConferenceStore = useConferenceStore();
+const languageStore = useLanguageStore();
+const serverUrl = import.meta.env.VITE_SERWER;
 
 onMounted(() => {
-  ConferenceStore.fetchData()
-  ConferenceStore.fetchBannerData()
-})
+  ConferenceStore.fetchData();
+  ConferenceStore.fetchBannerData();
+});
 watch(
-    () => languageStore.locale,
-    () => {
-      ConferenceStore.fetchData()
-    },
-)
-const t = (key) => languageStore.currentTranslation[key] || key
+  () => languageStore.locale,
+  () => {
+    ConferenceStore.fetchData();
+  }
+);
+const t = (key) => languageStore.currentTranslation[key] || key;
 
 // Funkcja do przewijania strony
 const scrollToContent = () => {
-  const contentSection = document.getElementById('content-section')
+  const contentSection = document.getElementById("content-section");
   if (contentSection) {
-    contentSection.scrollIntoView({ behavior: 'smooth' })
+    contentSection.scrollIntoView({ behavior: "smooth" });
   }
-}
+};
 </script>
 
 <template>
@@ -36,8 +36,8 @@ const scrollToContent = () => {
     <div>
       <div v-if="ConferenceStore.loading">Loading...</div>
       <div v-else-if="ConferenceStore.error">{{ ConferenceStore.error }}</div>
-      <div v-else>
-        <div v-if="ConferenceStore.hasBanner" class="conferences-baner">
+      <div v-else-if="ConferenceStore.hasBanner">
+        <div class="conferences-baner">
           <img :src="serverUrl + ConferenceStore.bannerData.image.url" alt="Conference Banner" />
           <div @click="scrollToContent" class="mobile-do-not-display scroll-button">
             <font-awesome-icon :icon="faArrowDown" />
@@ -47,19 +47,15 @@ const scrollToContent = () => {
           <ul>
             <li class="conference-card">
               <div>
-                <h1>{{ t('conferences') }}</h1>
+                <h1>{{ t("conferences") }}</h1>
               </div>
-              <div class="conference-card-right conference-card-right-header ">
+              <div class="conference-card-right conference-card-right-header">
                 <div>
-                  <p class="mobile-do-not-display conference-card-right-date">{{ t('date') }}</p>
+                  <p class="mobile-do-not-display conference-card-right-date">{{ t("date") }}</p>
                 </div>
               </div>
             </li>
-            <li
-                v-for="conference in ConferenceStore.data"
-                :key="conference.id"
-                class="conference-card"
-            >
+            <li v-for="conference in ConferenceStore.data" :key="conference.id" class="conference-card">
               <div>
                 <h2>
                   {{ conference.name }}
@@ -70,7 +66,7 @@ const scrollToContent = () => {
                 <div v-if="conference.link">
                   <p>
                     <a class="conference-card-right-link" :href="conference.link" target="_blank"
-                    >{{ t('read_more') }}
+                      >{{ t("read_more") }}
                     </a>
                   </p>
                 </div>
@@ -166,7 +162,7 @@ h1 {
     flex-direction: row-reverse;
     justify-content: start;
   }
-  .conference-card-right-link{
+  .conference-card-right-link {
     justify-self: flex-end;
   }
   .scroll-button {
@@ -176,9 +172,8 @@ h1 {
   .scroll-button svg {
     font-size: 2rem;
   }
-  .mobile-do-not-display{
+  .mobile-do-not-display {
     display: none;
   }
-
 }
 </style>

@@ -1,49 +1,45 @@
 <script setup>
-import { useEmploymentStore } from '@/stores/employmentStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import { watch, onMounted } from 'vue'
+import { useEmploymentStore } from "@/stores/employmentStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import { watch, onMounted } from "vue";
 
-const EmploymentStore = useEmploymentStore()
-const languageStore = useLanguageStore()
+const EmploymentStore = useEmploymentStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  EmploymentStore.fetchData()
-})
+  EmploymentStore.fetchData();
+});
 
 watch(
   () => languageStore.locale,
   () => {
-    EmploymentStore.fetchData()
-  },
-)
-const t = (key) => languageStore.currentTranslation[key] || key
+    EmploymentStore.fetchData();
+  }
+);
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <div class="c-Employment">
     <div>
-      <div v-if="EmploymentStore.loading">{{ t('loading') }}</div>
+      <div v-if="EmploymentStore.loading">{{ t("loading") }}</div>
       <div v-else-if="EmploymentStore.error">{{ EmploymentStore.error }}</div>
       <div v-else class="Employment-container">
         <ul>
           <li class="Employment-card">
             <div>
-              <h1>{{ t('employment') }}</h1>
+              <h1>{{ t("employment") }}</h1>
             </div>
             <div class="Employment-card-right Employment-card-right-header">
               <div>
-                <p class="Employment-card-right-location">{{ t('location') }}</p>
+                <p class="Employment-card-right-location">{{ t("location") }}</p>
               </div>
               <div>
-                <p class="Employment-card-right-date">{{ t('date') }}</p>
+                <p class="Employment-card-right-date">{{ t("date") }}</p>
               </div>
             </div>
           </li>
-          <li
-            v-for="Employment in EmploymentStore.main"
-            :key="Employment.id"
-            class="Employment-card"
-          >
+          <li v-for="Employment in EmploymentStore.main" :key="Employment.id" class="Employment-card">
             <div>
               <h2>{{ Employment.role }}, {{ Employment.company }}</h2>
               <p>{{ Employment.description }}</p>
@@ -61,23 +57,19 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
           <li class="Employment-card">
             <div class="Employment-card-title">
-              <h1>{{ t('summer_school_courses') }}</h1>
-              <p>( {{ t('as_lecturer') }} )</p>
+              <h1>{{ t("summer_school_courses") }}</h1>
+              <p>( {{ t("as_lecturer") }} )</p>
             </div>
             <div class="Employment-card-right Employment-card-right-header">
               <div>
-                <p class="Employment-card-right-location">{{ t('location') }}</p>
+                <p class="Employment-card-right-location">{{ t("location") }}</p>
               </div>
               <div>
-                <p class="Employment-card-right-date">{{ t('date') }}</p>
+                <p class="Employment-card-right-date">{{ t("date") }}</p>
               </div>
             </div>
           </li>
-          <li
-            v-for="Employment in EmploymentStore.additional"
-            :key="Employment.id"
-            class="Employment-card"
-          >
+          <li v-for="Employment in EmploymentStore.additional" :key="Employment.id" class="Employment-card">
             <div>
               <h2>{{ Employment.role }}, {{ Employment.company }}</h2>
               <p>{{ Employment.description }}</p>

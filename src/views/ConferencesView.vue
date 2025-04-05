@@ -36,7 +36,7 @@ const scrollToContent = () => {
     <div>
       <div v-if="ConferenceStore.loading">Loading...</div>
       <div v-else-if="ConferenceStore.error">{{ ConferenceStore.error }}</div>
-      <div v-else-if="ConferenceStore.hasBanner">
+      <div v-else>
         <div class="conferences-baner">
           <img :src="serverUrl + ConferenceStore.bannerData.image.url" alt="Conference Banner" />
           <div @click="scrollToContent" class="mobile-do-not-display scroll-button">

@@ -8,13 +8,13 @@ import vueDevTools from "vite-plugin-vue-devtools";
 export default defineConfig({
   server: {
     allowedHosts: ["cms.jakubisanski.pl"],
-    proxy: {
-      "/admin": {
-        target: "https://cms.jakubisanski.pl",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-      },
-    },
+    // proxy: {
+    //   "/admin": {
+    //     target: "https://cms.jakubisanski.pl",
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, ""),
+    //   },
+    // },
   },
   plugins: [vue(), vueDevTools()],
   resolve: {

@@ -11,7 +11,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/api": {
+      "/admin": {
         target: "https://cms.jakubisanski.pl",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),

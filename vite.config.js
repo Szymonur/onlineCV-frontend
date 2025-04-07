@@ -8,8 +8,6 @@ import vueDevTools from "vite-plugin-vue-devtools";
 export default defineConfig({
   server: {
     allowedHosts: ["cms.jakubisanski.pl"],
-  },
-  server: {
     proxy: {
       "/admin": {
         target: "https://cms.jakubisanski.pl",

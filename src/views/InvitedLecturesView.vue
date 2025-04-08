@@ -22,7 +22,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
 <template>
   <div class="c-invitedLectures">
     <div>
-      <div v-if="InvitedLectureStore.loading">Loading...</div>
+      <div v-if="InvitedLectureStore.loading"></div>
       <div v-else-if="InvitedLectureStore.error">{{ InvitedLectureStore.error }}</div>
       <div v-else class="invitedLectures-container">
         <ul>

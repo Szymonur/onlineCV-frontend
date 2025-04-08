@@ -1,38 +1,39 @@
 <script setup>
-import { useArticlesStore } from '@/stores/articlesStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import WordCloud from '@/components/WordCloud.vue'
+import { useArticlesStore } from "@/stores/articlesStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import LoadingSpinner from "@/components/LoadingSpinner.vue";
+import WordCloud from "@/components/WordCloud.vue";
 
 // import CitationsSideBar from '@/components/CitationsSideBar.vue'
 
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 
-const ArticlesStore = useArticlesStore()
-const languageStore = useLanguageStore()
+const ArticlesStore = useArticlesStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  ArticlesStore.fetchData()
-})
-const t = (key) => languageStore.currentTranslation[key] || key
+  ArticlesStore.fetchData();
+});
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <div class="c-articles">
     <div>
-      <div v-if="ArticlesStore.loading">{{ t('loading') }}</div>
+      <div v-if="ArticlesStore.loading"></div>
       <div v-else-if="ArticlesStore.error">{{ ArticlesStore.error }}</div>
       <div v-else class="articles-container">
         <ul>
           <li class="article-card">
             <div>
-              <h1>{{ t('articles') }}</h1>
+              <h1>{{ t("articles") }}</h1>
             </div>
             <div class="article-card-right-header mobile-do-not-display">
               <!-- <div>
                 <p>{{ t('cited_by') }}</p>
               </div> -->
               <div>
-                <p>{{ t('year') }}</p>
+                <p>{{ t("year") }}</p>
               </div>
             </div>
           </li>

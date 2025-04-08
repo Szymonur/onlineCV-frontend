@@ -74,7 +74,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
 <template>
   <div class="c-didactics">
     <div>
-      <div v-if="DidacticsStore.loading">{{ t("loading") }}</div>
+      <div v-if="DidacticsStore.loading"></div>
       <div v-else-if="DidacticsStore.error">{{ DidacticsStore.error }}</div>
       <div v-else class="didactics-container">
         <DidacticsSideNav :links="DidacticsStore.groupedData" />

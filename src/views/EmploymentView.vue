@@ -22,7 +22,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
 <template>
   <div class="c-Employment">
     <div>
-      <div v-if="EmploymentStore.loading">{{ t("loading") }}</div>
+      <div v-if="EmploymentStore.loading"></div>
       <div v-else-if="EmploymentStore.error">{{ EmploymentStore.error }}</div>
       <div v-else class="Employment-container">
         <ul>

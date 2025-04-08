@@ -1,53 +1,45 @@
 <script setup>
-import { useCitationsStore } from '@/stores/citationsStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import { onMounted, computed } from 'vue'
-import { Bar } from 'vue-chartjs'
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-} from 'chart.js'
+import { useCitationsStore } from "@/stores/citationsStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import { onMounted, computed } from "vue";
+import { Bar } from "vue-chartjs";
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from "chart.js";
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
-const CitationsStore = useCitationsStore()
-const languageStore = useLanguageStore()
+const CitationsStore = useCitationsStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  CitationsStore.fetchData()
-})
+  CitationsStore.fetchData();
+});
 
-const t = (key) => languageStore.currentTranslation[key] || key
+const t = (key) => languageStore.currentTranslation[key] || key;
 
 const citationsData = computed(() => {
-  if (!CitationsStore.data || !CitationsStore.data.table) return []
-  return CitationsStore.data.table
-})
+  if (!CitationsStore.data || !CitationsStore.data.table) return [];
+  return CitationsStore.data.table;
+});
 
 const yearlyCitations = computed(() => {
-  if (!CitationsStore.data || !CitationsStore.data.graph) return { labels: [], datasets: [] }
+  if (!CitationsStore.data || !CitationsStore.data.graph) return { labels: [], datasets: [] };
   return {
     labels: CitationsStore.data.graph.map((entry) => entry.year),
     datasets: [
       {
-        label: t('citations_per_year'),
+        label: t("citations_per_year"),
         data: CitationsStore.data.graph.map((entry) => entry.citations),
-        backgroundColor: 'rgba(0, 0, 255, 0.6)',
-        borderColor: 'blue',
+        backgroundColor: "rgba(0, 0, 255, 0.6)",
+        borderColor: "blue",
         borderWidth: 1,
       },
     ],
-  }
-})
+  };
+});
 
 const coAuthors = computed(() => {
-  return CitationsStore.data?.co_authors || []
-})
+  return CitationsStore.data?.co_authors || [];
+});
 
 const chartOptions = {
   responsive: true,
@@ -57,36 +49,36 @@ const chartOptions = {
       display: true,
     },
   },
-}
+};
 </script>
 
 <template>
   <div class="c-citatons-side-bar">
     <div>
-      <div v-if="CitationsStore.loading">{{ t('loading') }}</div>
+      <div v-if="CitationsStore.loading"></div>
       <div v-else-if="CitationsStore.error">{{ CitationsStore.error }}</div>
       <div v-else class="citatons-side-bar-container">
         <table>
           <thead>
             <tr>
               <th></th>
-              <th>{{ t('all_time') }}</th>
-              <th>{{ t('since') }} 2020</th>
+              <th>{{ t("all_time") }}</th>
+              <th>{{ t("since") }} 2020</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{{ t('citations') }}</td>
+              <td>{{ t("citations") }}</td>
               <td>{{ citationsData[0]?.citations?.all }}</td>
               <td>{{ citationsData[0]?.citations?.since_2020 }}</td>
             </tr>
             <tr>
-              <td>{{ t('H-Index') }}</td>
+              <td>{{ t("H-Index") }}</td>
               <td>{{ citationsData[1]?.h_index?.all }}</td>
               <td>{{ citationsData[1]?.h_index?.since_2020 }}</td>
             </tr>
             <tr>
-              <td>{{ t('i10-Index') }}</td>
+              <td>{{ t("i10-Index") }}</td>
               <td>{{ citationsData[2]?.i10_index?.all }}</td>
               <td>{{ citationsData[2]?.i10_index?.since_2020 }}</td>
             </tr>
@@ -101,7 +93,7 @@ const chartOptions = {
 
         <!-- CO-AUTHORS -->
         <div class="co-authors">
-          <h3>{{ t('co_authors') }}</h3>
+          <h3>{{ t("co_authors") }}</h3>
           <ul>
             <li v-for="author in coAuthors" :key="author.author_id" class="co-author-item">
               <div class="co-author-item-img-name">

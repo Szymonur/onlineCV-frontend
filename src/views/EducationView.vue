@@ -1,40 +1,40 @@
 <script setup>
-import { useEducationStore } from '@/stores/educationStore.js'
-import { useLanguageStore } from '@/stores/languageStore'
-import { watch, onMounted } from 'vue'
+import { useEducationStore } from "@/stores/educationStore.js";
+import { useLanguageStore } from "@/stores/languageStore";
+import { watch, onMounted } from "vue";
 
-const EducationStore = useEducationStore()
-const languageStore = useLanguageStore()
+const EducationStore = useEducationStore();
+const languageStore = useLanguageStore();
 
 onMounted(() => {
-  EducationStore.fetchData()
-})
+  EducationStore.fetchData();
+});
 watch(
   () => languageStore.locale,
   () => {
-    EducationStore.fetchData()
-  },
-)
-const t = (key) => languageStore.currentTranslation[key] || key
+    EducationStore.fetchData();
+  }
+);
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <div class="c-education">
     <div>
-      <div v-if="EducationStore.loading">{{ t('loading') }}</div>
+      <div v-if="EducationStore.loading"></div>
       <div v-else-if="EducationStore.error">{{ EducationStore.error }}</div>
       <div v-else class="education-container">
         <ul>
           <li class="education-card">
             <div>
-              <h1>{{ t('education') }}</h1>
+              <h1>{{ t("education") }}</h1>
             </div>
             <div class="education-card-right education-card-right-header">
               <div>
-                <p class="education-card-right-location">{{ t('location') }}</p>
+                <p class="education-card-right-location">{{ t("location") }}</p>
               </div>
               <div>
-                <p class="education-card-right-date">{{ t('date') }}</p>
+                <p class="education-card-right-date">{{ t("date") }}</p>
               </div>
             </div>
           </li>
@@ -56,23 +56,19 @@ const t = (key) => languageStore.currentTranslation[key] || key
 
           <li class="education-card">
             <div class="education-card-title">
-              <h1>{{ t('summer_school_courses') }}</h1>
-              <p>( {{ t('as_participant') }} )</p>
+              <h1>{{ t("summer_school_courses") }}</h1>
+              <p>( {{ t("as_participant") }} )</p>
             </div>
             <div class="education-card-right education-card-right-header">
               <div>
-                <p class="education-card-right-location">{{ t('location') }}</p>
+                <p class="education-card-right-location">{{ t("location") }}</p>
               </div>
               <div>
-                <p class="education-card-right-date">{{ t('date') }}</p>
+                <p class="education-card-right-date">{{ t("date") }}</p>
               </div>
             </div>
           </li>
-          <li
-            v-for="education in EducationStore.additional"
-            :key="education.id"
-            class="education-card"
-          >
+          <li v-for="education in EducationStore.additional" :key="education.id" class="education-card">
             <div>
               <h2>{{ education.university }}, {{ education.degree }}</h2>
               <p>{{ education.description }}</p>

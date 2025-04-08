@@ -34,7 +34,7 @@ const scrollToContent = () => {
 <template>
   <div class="c-conferences">
     <div>
-      <div v-if="ConferenceStore.loading">Loading...</div>
+      <div v-if="ConferenceStore.loading"></div>
       <div v-else-if="ConferenceStore.error">{{ ConferenceStore.error }}</div>
       <div v-else>
         <div class="conferences-baner" v-if="ConferenceStore.bannerData && ConferenceStore.bannerData.image">

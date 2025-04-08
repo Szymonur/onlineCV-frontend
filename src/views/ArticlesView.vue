@@ -1,7 +1,6 @@
 <script setup>
 import { useArticlesStore } from "@/stores/articlesStore.js";
 import { useLanguageStore } from "@/stores/languageStore";
-import LoadingSpinner from "@/components/LoadingSpinner.vue";
 import WordCloud from "@/components/WordCloud.vue";
 
 // import CitationsSideBar from '@/components/CitationsSideBar.vue'

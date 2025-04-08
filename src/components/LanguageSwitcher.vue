@@ -1,6 +1,8 @@
 <template>
   <div class="language-switcher" ref="dropdownRef">
-    <button class="current-language" @click="toggleDropdown">{{ currentLanguage.label }} ⏷</button>
+    <button class="current-language" @click="toggleDropdown">
+      {{ currentLanguage.label }} <font-awesome-icon :icon="faChevronDown" />
+    </button>
     <ul v-if="isOpen" class="dropdown">
       <li v-for="lang in languages" :key="lang.code" @click="changeLanguage(lang.code)">
         {{ lang.label }}
@@ -13,6 +15,9 @@
 import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useLanguageStore } from "@/stores/languageStore";
 import { useResearchGrantsStore } from "@/stores/researchGrantsStore";
+
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const languageStore = useLanguageStore();
 const researchGrantStore = useResearchGrantsStore();

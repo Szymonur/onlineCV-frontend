@@ -48,7 +48,7 @@ export const useAppStore = defineStore("appStore", {
 
       // Zrób to asynchronicznie, aby nie blokować pierwszego widoku
       await Promise.all(stores.map((store) => store.fetchData()));
-      await Promise.all(useConferenceStore.fetchBannerData());
+      await Promise.all(useConferenceStore().fetchBannerData());
     },
     async reloadDataAfterLanguageChange() {
       const stores = [

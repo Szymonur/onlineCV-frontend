@@ -39,7 +39,6 @@ export const useAppStore = defineStore("appStore", {
         useEmploymentStore(),
         useArticlesStore(),
         useConferenceStore(),
-        fetchBannerData(),
         useEducationStore(),
         useInvitedLecturesStore(),
         useResearchGrantsStore(),

@@ -1,15 +1,14 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { useLanguageStore } from '@/stores/languageStore'
+import { RouterLink } from "vue-router";
+import { useLanguageStore } from "@/stores/languageStore";
 
-const languageStore = useLanguageStore()
-const t = (key) => languageStore.currentTranslation[key] || key
+const languageStore = useLanguageStore();
+const t = (key) => languageStore.currentTranslation[key] || key;
 </script>
 
 <template>
   <nav>
-    <RouterLink to="/publications/articles">{{ t('articles') }}</RouterLink>
-    <RouterLink to="/publications/research_grants">{{ t('research_grants') }} </RouterLink>
+    <RouterLink to="/publications/articles">{{ t("articles") }}</RouterLink>
   </nav>
 </template>
 
@@ -35,7 +34,7 @@ nav a {
 }
 
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;

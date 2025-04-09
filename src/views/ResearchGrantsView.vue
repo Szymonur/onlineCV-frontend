@@ -49,6 +49,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
   flex-direction: row;
   align-items: start;
   gap: 2rem;
+  padding-right: 40px;
 }
 
 .projects-container {

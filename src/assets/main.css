@@ -1,4 +1,4 @@
-@import './base.css';
+@import "./base.css";
 
 html,
 main,
@@ -18,20 +18,28 @@ a {
 a:hover {
   text-decoration: none;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100svh;
+}
 a {
   position: relative;
   text-decoration: none;
   color: black;
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.25s ease-in-out;
 }
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;

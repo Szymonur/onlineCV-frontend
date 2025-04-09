@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, watch } from "vue";
 import { useLanguageStore } from "@/stores/languageStore";
-import { useRoute, useRouter } from "vue-router"; // Dodajemy vue-router do śledzenia zmian w URL
+import { useRoute } from "vue-router";
 
 const props = defineProps({
   links: {
@@ -15,40 +15,21 @@ const languageStore = useLanguageStore();
 const t = (key) => languageStore.currentTranslation[key] || key;
 
 const activeSlug = ref(null);
-const route = useRoute(); // Używamy routera do monitorowania aktualnego URL
-const router = useRouter(); // Używamy routera do zmiany hash w URL
+const route = useRoute();
 
-// Funkcja do ustawiania aktywnej sekcji
+// Aktualizuj aktywny element na podstawie route.hash
+watch(
+  () => route.hash,
+  (newHash) => {
+    activeSlug.value = newHash?.replace("#", "") || null;
+  },
+  { immediate: true }
+);
+
+// Kliknięcie w link tylko ustawia aktywny slug (opcjonalnie)
 const setActive = (slug) => {
   activeSlug.value = slug;
-  window.location.hash = slug; // Zmieniamy hash w URL po kliknięciu
 };
-
-// Obserwowanie zmiany w URL (hash)
-watch(
-  () => route.hash, // Obserwujemy zmianę hash w URL
-  (newHash) => {
-    const hash = newHash.replace("#", "");
-    activeSlug.value = hash || null; // Jeżeli hash jest pusty, ustawiamy null
-  }
-);
-
-// Sprawdzanie aktywnej sekcji na podstawie URL po załadowaniu strony
-onMounted(() => {
-  const hash = window.location.hash.replace("#", "");
-  if (hash) {
-    activeSlug.value = hash;
-  }
-});
-
-// Obserwowanie zmiany URL z użyciem window.location.hash
-watch(
-  () => window.location.hash,
-  (newHash) => {
-    const hash = newHash.replace("#", "");
-    activeSlug.value = hash || null;
-  }
-);
 </script>
 
 <template>
@@ -59,7 +40,7 @@ watch(
       :id="link.slug"
       :href="'#' + link.slug"
       :class="{ active: activeSlug === link.slug }"
-      @click.prevent="setActive(link.slug)">
+      @click="setActive(link.slug)">
       {{ link.name }}
     </a>
   </nav>

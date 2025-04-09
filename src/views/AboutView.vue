@@ -87,7 +87,6 @@ watch(
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .c-about-container {
   max-width: 1024px;

@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-import { useLanguageStore } from '@/stores/languageStore'
+import { ref } from "vue";
+import { RouterLink } from "vue-router";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
+import { useLanguageStore } from "@/stores/languageStore";
 
-const languageStore = useLanguageStore()
-const t = (key) => languageStore.currentTranslation[key] || key
-const isMenuOpen = ref(false)
+const languageStore = useLanguageStore();
+const t = (key) => languageStore.currentTranslation[key] || key;
+const isMenuOpen = ref(false);
 </script>
 
 <template>
@@ -18,15 +18,14 @@ const isMenuOpen = ref(false)
     </div>
 
     <div class="menu-links" :class="{ open: isMenuOpen }">
-      <RouterLink to="/about" @click="isMenuOpen = false">{{ t('about') }}</RouterLink>
-      <RouterLink to="/publications" @click="isMenuOpen = false">{{ t('publicatons') }}</RouterLink>
-      <RouterLink to="/conferences" @click="isMenuOpen = false">{{ t('conferences') }}</RouterLink>
-      <RouterLink to="/education" @click="isMenuOpen = false">{{ t('education') }}</RouterLink>
-      <RouterLink to="/employment" @click="isMenuOpen = false">{{ t('employment') }}</RouterLink>
-      <RouterLink to="/invited_lectures" @click="isMenuOpen = false">{{
-        t('invited_lectures')
-      }}</RouterLink>
-      <RouterLink to="/didactics" @click="isMenuOpen = false">{{ t('didactics') }}</RouterLink>
+      <RouterLink to="/about" @click="isMenuOpen = false">{{ t("about") }}</RouterLink>
+      <RouterLink to="/publications" @click="isMenuOpen = false">{{ t("publicatons") }}</RouterLink>
+      <RouterLink to="/research_grants" @click="isMenuOpen = false">{{ t("research_grants") }} </RouterLink>
+      <RouterLink to="/conferences" @click="isMenuOpen = false">{{ t("conferences") }}</RouterLink>
+      <RouterLink to="/education" @click="isMenuOpen = false">{{ t("education") }}</RouterLink>
+      <RouterLink to="/employment" @click="isMenuOpen = false">{{ t("employment") }}</RouterLink>
+      <RouterLink to="/invited_lectures" @click="isMenuOpen = false">{{ t("invited_lectures") }}</RouterLink>
+      <RouterLink to="/didactics" @click="isMenuOpen = false">{{ t("didactics") }}</RouterLink>
     </div>
 
     <LanguageSwitcher />
@@ -44,7 +43,7 @@ nav {
   position: relative;
   gap: 1.5rem;
 }
-.menu-links{
+.menu-links {
   display: flex;
   gap: 1.5rem;
 }
@@ -76,7 +75,7 @@ nav a {
 }
 
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;

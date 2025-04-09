@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar.vue";
 import { watch, onMounted } from "vue";
 import { useLanguageStore } from "@/stores/languageStore";
 import { useAppStore } from "@/stores/useAppStore";
+import Footer from "./components/Footer.vue";
 
 // Inicjalizujemy store
 const languageStore = useLanguageStore();
@@ -23,10 +24,12 @@ watch(
 
 <template>
   <NavBar />
-  <div class="wrapper"></div>
-  <transition name="fade" mode="out-in">
-    <RouterView />
-  </transition>
+  <div class="wrapper">
+    <transition name="fade" mode="out-in">
+      <RouterView />
+    </transition>
+    <Footer />
+  </div>
 </template>
 
 <style scoped></style>

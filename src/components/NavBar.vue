@@ -101,6 +101,24 @@ nav a:hover::after {
 nav a:not(:hover)::after {
   width: 0; /* Podkreślenie znika po zjechaniu myszką */
 }
+@media (max-width: 1100px) {
+  nav {
+    gap: 0.5rem;
+  }
+  nav a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 950px) {
+  nav {
+    gap: 0.5rem;
+    padding: 0.25rem 1rem;
+  }
+  nav a {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;

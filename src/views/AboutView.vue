@@ -146,6 +146,9 @@ a:hover .icon {
   gap: 5px;
 }
 @media (max-width: 768px) {
+  .c-about {
+    height: auto;
+  }
   .c-about-top {
     flex-direction: column;
     gap: 0;

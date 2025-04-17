@@ -7,7 +7,7 @@ import { createHead } from "@vueuse/head";
 import App from "./App.vue";
 import { routes } from "./router";
 
-export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) => {
+export const createApp = ViteSSG(App, { routes }, ({ app, routes }) => {
   app.use(createPinia());
   app.use(createHead());
 

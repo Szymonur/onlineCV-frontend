@@ -126,6 +126,9 @@ nav a:not(:hover)::after {
   nav {
     flex-direction: row-reverse;
   }
+  nav a {
+    font-size: 1.2rem;
+  }
   .menu-links {
     position: absolute;
     top: 100%;

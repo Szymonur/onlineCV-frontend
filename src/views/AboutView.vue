@@ -2,6 +2,7 @@
 import { useAboutStore } from "@/stores/aboutStore";
 import { useLanguageStore } from "@/stores/languageStore";
 import { watch, onMounted } from "vue";
+import { useHead } from "@vueuse/head";
 
 // Import Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -20,6 +21,15 @@ watch(
     dataStore.fetchData();
   }
 );
+useHead({
+  title: "O mnie - Jakub Isański",
+  meta: [
+    { name: "description", content: "Dowiedz się więcej o Jakubie Isańskim i jego działalności naukowej." },
+    { property: "og:title", content: "O mnie - Jakub Isański" }, // OpenGraph Title
+    { property: "og:description", content: "Dowiedz się o moich badaniach i publikacjach." }, // OpenGraph Description
+    { property: "og:url", content: "https://twojastrona.pl/about" }, // URL podstrony w OpenGraph
+  ],
+});
 </script>
 
 <template>
@@ -38,15 +48,6 @@ watch(
             <h2>{{ dataStore.data[0].title }}</h2>
             <h2>{{ dataStore.data[0].department }}</h2>
             <div class="c-about-top-contact">
-              <!-- <a
-                v-if="dataStore.data[0].phone"
-                :href="'tel:' + dataStore.data[0].phone"
-                class="flex items-center gap-2"
-              >
-                <FontAwesomeIcon :icon="faPhone" class="icon" />
-                {{ dataStore.data[0].phone }}
-              </a> -->
-
               <a
                 v-if="dataStore.data[0].email"
                 :href="'mailto:' + dataStore.data[0].email"

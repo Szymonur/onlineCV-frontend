@@ -4,7 +4,15 @@ import NavBar from "./components/NavBar.vue";
 import { watch, onMounted } from "vue";
 import { useLanguageStore } from "@/stores/languageStore";
 import { useAppStore } from "@/stores/useAppStore";
+import { useHead } from "@vueuse/head";
 import Footer from "./components/Footer.vue";
+
+useHead({
+  title: "Jakub Isański | UAM Professor ",
+  meta: [
+    
+  ]
+})
 
 // Inicjalizujemy store
 const languageStore = useLanguageStore();

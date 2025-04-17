@@ -1,0 +1,1113 @@
+{
+  "search_metadata": {
+    "id": "67d694b98733edfdcd4d3863",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/833810f8e2b1ca99/67d694b98733edfdcd4d3863.json",
+    "created_at": "2025-03-16 09:07:05 UTC",
+    "processed_at": "2025-03-16 09:07:05 UTC",
+    "google_scholar_author_url": "https://scholar.google.com/citations?user=lo1hhRAAAAAJ&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/833810f8e2b1ca99/67d694b98733edfdcd4d3863.html",
+    "total_time_taken": 0.75
+  },
+  "search_parameters": {
+    "engine": "google_scholar_author",
+    "author_id": "lo1hhRAAAAAJ",
+    "hl": "en"
+  },
+  "author": {
+    "name": "Jakub Isański",
+    "affiliations": "Adam Mickiewicz University, Poznań, Poland",
+    "email": "Verified email at amu.edu.pl",
+    "website": "http://www.socjologia.amu.edu.pl/isoc/profile.php?lookup=36",
+    "interests": [
+      {
+        "title": "Social mobility",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:social_mobility",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Asocial_mobility"
+      },
+      {
+        "title": "social change",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:social_change",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Asocial_change"
+      },
+      {
+        "title": "new technologies and society",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:new_technologies_and_society",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Anew_technologies_and_society"
+      }
+    ],
+    "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=lo1hhRAAAAAJ&citpid=3"
+  },
+  "articles": [
+    {
+      "title": "Feminized forced migration: Ukrainian war refugees",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:35r97b3x0nAC",
+      "citation_id": "lo1hhRAAAAAJ:35r97b3x0nAC",
+      "authors": "HV Josephine Andrews, Jakub Isański, Marek Nowak, Victoriya Sereda ...",
+      "publication": "Women's Studies International Forum 99 (July-August 2023), 1-10, 2023",
+      "cited_by": {
+        "value": 41,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12364905769910323635",
+        "serpapi_link": "https://serpapi.com/search.json?cites=12364905769910323635&engine=google_scholar&hl=en",
+        "cites_id": "12364905769910323635"
+      },
+      "year": "2023",
+      "keywords": [
+        { "text": "AI", "value": 5 },
+        { "text": "Machine Learning", "value": 3 },
+        { "text": "Deep Learning", "value": 2 },
+        { "text": "Neural Networks", "value": 4 }
+      ]
+    },
+    {
+      "title": "Polish Contemporary Migration: From Co‐migrants to Project ME",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:YsMSGLbcyi4C",
+      "citation_id": "lo1hhRAAAAAJ:YsMSGLbcyi4C",
+      "authors": "J Isański, A Mleczko, RSA Eid",
+      "publication": "International Migration 52 (1), 4-21, 2014",
+      "cited_by": {
+        "value": 29,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10176613767740150311",
+        "serpapi_link": "https://serpapi.com/search.json?cites=10176613767740150311&engine=google_scholar&hl=en",
+        "cites_id": "10176613767740150311"
+      },
+      "year": "2014",
+      "keywords": [
+        { "text": "losowe", "value": 5 },
+        { "text": "słowa", "value": 3 },
+        { "text": "kluczowe", "value": 2 },
+        { "text": "Neural Networks", "value": 4 }
+      ]
+    },
+    {
+      "title": "Migracje i transfery kapitału społecznego",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:tkaPQYYpVKoC",
+      "citation_id": "lo1hhRAAAAAJ:tkaPQYYpVKoC",
+      "authors": "J Isański",
+      "publication": "Wydawnictwo Naukowe Uniwersytetu im. Adama Mickiewicza, 2016",
+      "cited_by": {
+        "value": 25,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2149141859359742041",
+        "serpapi_link": "https://serpapi.com/search.json?cites=2149141859359742041&engine=google_scholar&hl=en",
+        "cites_id": "2149141859359742041"
+      },
+      "year": "2016",
+      "keywords": [
+        { "text": "losowe", "value": 5 },
+        { "text": "słowa", "value": 3 },
+        { "text": "kluczowe", "value": 2 },
+        { "text": "test", "value": 1 }
+      ]
+    },
+    {
+      "title": "Social reception and inclusion of refugees from Ukraine",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:kzcrU_BdoSEC",
+      "citation_id": "lo1hhRAAAAAJ:kzcrU_BdoSEC",
+      "authors": "J Isański, N Marek, MA Michalski, V Sereda, H Vakhitova",
+      "cited_by": {
+        "value": 16,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=92755934168757117",
+        "serpapi_link": "https://serpapi.com/search.json?cites=92755934168757117&engine=google_scholar&hl=en",
+        "cites_id": "92755934168757117"
+      },
+      "year": "2022"
+    },
+    {
+      "title": "HONEYMOON AS A RITE OF PASSAGE: SOCIOLOGICAL ANALYSIS OF CHANGES IN THE PHENOMENON",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:LkGwnXOMwfcC",
+      "citation_id": "lo1hhRAAAAAJ:LkGwnXOMwfcC",
+      "authors": "J Isański",
+      "publication": "FOLIA TURISTICA, 109, 2013",
+      "cited_by": {
+        "value": 9,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9232031273514033185",
+        "serpapi_link": "https://serpapi.com/search.json?cites=9232031273514033185&engine=google_scholar&hl=en",
+        "cites_id": "9232031273514033185"
+      },
+      "year": "2013"
+    },
+    {
+      "title": "The new parochialism? Polish migrant catholic parishes on the path of change",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:j8SEvjWlNXcC",
+      "citation_id": "lo1hhRAAAAAJ:j8SEvjWlNXcC",
+      "authors": "J Isański, M Nowak, J Kozak, J Eade",
+      "publication": "Review of Religious Research 65 (1), 139-159, 2023",
+      "cited_by": {
+        "value": 7,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10513790041660060229",
+        "serpapi_link": "https://serpapi.com/search.json?cites=10513790041660060229&engine=google_scholar&hl=en",
+        "cites_id": "10513790041660060229"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Odbiór społeczny i integracja uchodźców z Ukrainy",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:XD-gHx7UXLsC",
+      "citation_id": "lo1hhRAAAAAJ:XD-gHx7UXLsC",
+      "authors": "J Isański, M Nowak, V Sereda, H Vakhitova",
+      "publication": "Raport badawczy UKREF 1 (2), 3, 2022",
+      "cited_by": {
+        "value": 7,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11823132068605661157",
+        "serpapi_link": "https://serpapi.com/search.json?cites=11823132068605661157&engine=google_scholar&hl=en",
+        "cites_id": "11823132068605661157"
+      },
+      "year": "2022"
+    },
+    {
+      "title": "Fertility potential and child benefits questioned: Polish migration in the UK and changes of family policies in Poland",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:_Ybze24A_UAC",
+      "citation_id": "lo1hhRAAAAAJ:_Ybze24A_UAC",
+      "authors": "J Isański, M Michalski, K Szwarc, R Seredyńska-Abou Eid",
+      "publication": "Migration Letters 18 (4), 381-399, 2021",
+      "cited_by": {
+        "value": 7,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18236628582351052942",
+        "serpapi_link": "https://serpapi.com/search.json?cites=18236628582351052942&engine=google_scholar&hl=en",
+        "cites_id": "18236628582351052942"
+      },
+      "year": "2021"
+    },
+    {
+      "title": "Selling one's favourite piano to emigrate. Mobility patterns in Central Europe at the beginning of the 21st century.",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:UeHWp8X0CEIC",
+      "citation_id": "lo1hhRAAAAAJ:UeHWp8X0CEIC",
+      "authors": "LP Isański Jakub",
+      "publication": "Cambridge Scholars Publishing, 2011",
+      "cited_by": {
+        "value": 6,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6796666311605905763",
+        "serpapi_link": "https://serpapi.com/search.json?cites=6796666311605905763&engine=google_scholar&hl=en",
+        "cites_id": "6796666311605905763"
+      },
+      "year": "2011"
+    },
+    {
+      "title": "Niektóre problemy metodologiczne badań turystów i instytucji turystycznych,[in:] Z",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:eMMeJKvmdy0C",
+      "citation_id": "lo1hhRAAAAAJ:eMMeJKvmdy0C",
+      "authors": "K Podemski, J Isański",
+      "publication": "Uwarunkowania i plany rozwoju turystyki, part II: Zasoby antropogeniczne …, 2008",
+      "cited_by": {
+        "value": 6,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13569520953812720950",
+        "serpapi_link": "https://serpapi.com/search.json?cites=13569520953812720950&engine=google_scholar&hl=en",
+        "cites_id": "13569520953812720950"
+      },
+      "year": "2008"
+    },
+    {
+      "title": "Wpływ turystyki na środowisko społeczno-kulturowe",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:Se3iqnhoufwC",
+      "citation_id": "lo1hhRAAAAAJ:Se3iqnhoufwC",
+      "authors": "J Isański",
+      "publication": "Skutki rozwoju turystyki w środowisku społecznym–szanse i zagrożenia,[in …, 2008",
+      "cited_by": {
+        "value": 6,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15793204327880002751",
+        "serpapi_link": "https://serpapi.com/search.json?cites=15793204327880002751&engine=google_scholar&hl=en",
+        "cites_id": "15793204327880002751"
+      },
+      "year": "2008"
+    },
+    {
+      "title": "Socjologia kultury w czasach inteligentnych zwierząt i uczących się maszyn",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:tKAzc9rXhukC",
+      "citation_id": "lo1hhRAAAAAJ:tKAzc9rXhukC",
+      "authors": "H Mamzer, J Isański",
+      "publication": "Epigram, 2018",
+      "cited_by": {
+        "value": 5,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3054181469189465795",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3054181469189465795&engine=google_scholar&hl=en",
+        "cites_id": "3054181469189465795"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "Konsumpcyjna strona turystyki zorganizowanej, w: W cywilizacji konsumpcyjnej, red",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:JQOojiI6XY0C",
+      "citation_id": "lo1hhRAAAAAJ:JQOojiI6XY0C",
+      "authors": "J Isański",
+      "publication": "M. Golka, Wydawnictwo Fundacji Humaniora, Poznań, 2004",
+      "cited_by": {
+        "value": 5,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15194192734961840079",
+        "serpapi_link": "https://serpapi.com/search.json?cites=15194192734961840079&engine=google_scholar&hl=en",
+        "cites_id": "15194192734961840079"
+      },
+      "year": "2004"
+    },
+    {
+      "title": "Życie społeczne w kontekście migracyjnym. Parafia jako ośrodek życia religijno-społecznego poza granicami Polski,",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:1yQoGdGgb4wC",
+      "citation_id": "lo1hhRAAAAAJ:1yQoGdGgb4wC",
+      "authors": "I Jakub",
+      "publication": "Studia Polonijne 3 (I), 27-43, 2018",
+      "cited_by": {
+        "value": 4,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3778542458560146698",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3778542458560146698&engine=google_scholar&hl=en",
+        "cites_id": "3778542458560146698"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "Dostęp i użytkowanie nowych mediów przez młodzież",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:u5HHmVD_uO8C",
+      "citation_id": "lo1hhRAAAAAJ:u5HHmVD_uO8C",
+      "authors": "J Isański",
+      "publication": "Wydział Prawa i Administracji UAM, 2010",
+      "cited_by": {
+        "value": 4,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1389403175970139410",
+        "serpapi_link": "https://serpapi.com/search.json?cites=1389403175970139410&engine=google_scholar&hl=en",
+        "cites_id": "1389403175970139410"
+      },
+      "year": "2010"
+    },
+    {
+      "title": "From the Source to Destination Countries: Central and Eastern Europe on the Move (as Usual)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:9Nmd_mFXekcC",
+      "citation_id": "lo1hhRAAAAAJ:9Nmd_mFXekcC",
+      "authors": "J Isański, J Dvorak, S Espenberg, MA Michalski, V Sereda, H Vakhitova, ...",
+      "publication": "The Palgrave Handbook of Global Social Problems, 1-18, 2023",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6825499844570625486",
+        "serpapi_link": "https://serpapi.com/search.json?cites=6825499844570625486&engine=google_scholar&hl=en",
+        "cites_id": "6825499844570625486"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Odbiór społeczny i integracja uchodźców z Ukrainy. Raport badawczy UKREF 1 (2022)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:7T2F9Uy0os0C",
+      "citation_id": "lo1hhRAAAAAJ:7T2F9Uy0os0C",
+      "authors": "J Isański, M Nowak, V Sereda, H Vakhitova, MA Michalski",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3576767466914889753",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3576767466914889753&engine=google_scholar&hl=en",
+        "cites_id": "3576767466914889753"
+      },
+      "year": "2022"
+    },
+    {
+      "title": "New Social Relations: Seniors in Postmodern Societies",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:PR6Y55bgFSsC",
+      "citation_id": "lo1hhRAAAAAJ:PR6Y55bgFSsC",
+      "authors": "H Mamzer, J Isański, A Bełkot",
+      "publication": "Oficyna Wydawnicza 'Epigram', 2013",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8129137348524651632",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8129137348524651632&engine=google_scholar&hl=en",
+        "cites_id": "8129137348524651632"
+      },
+      "year": "2013"
+    },
+    {
+      "title": "KOMUNIKOWANIE MIĘDZYKULTUROWE",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:Y0pCki6q_DkC",
+      "citation_id": "lo1hhRAAAAAJ:Y0pCki6q_DkC",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9124839762319129121,8285916292973785487",
+        "serpapi_link": "https://serpapi.com/search.json?cites=9124839762319129121%2C8285916292973785487&engine=google_scholar&hl=en",
+        "cites_id": "9124839762319129121,8285916292973785487"
+      },
+      "year": "2008"
+    },
+    {
+      "title": "Liberation, Resettlement, and Looting in Postwar Memoirs from Poland",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&citation_for_view=lo1hhRAAAAAJ:uc_IGeMz5qoC",
+      "citation_id": "lo1hhRAAAAAJ:uc_IGeMz5qoC",
+      "authors": "J Isański",
+      "publication": "East Central Europe 51 (1), 83-107, 2024",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15368640541886913133",
+        "serpapi_link": "https://serpapi.com/search.json?cites=15368640541886913133&engine=google_scholar&hl=en",
+        "cites_id": "15368640541886913133"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Zbrodnie, bezprawie i przemoc seksualna wobec ludności cywilnej w czasach II wojny światowej",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:hkOj_22Ku90C",
+      "citation_id": "lo1hhRAAAAAJ:hkOj_22Ku90C",
+      "authors": "I Jakub",
+      "publication": "Studia nad Autorytaryzmem i Totalitaryzmem 41 (2019), 49-64, 2019",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2098477613707105583",
+        "serpapi_link": "https://serpapi.com/search.json?cites=2098477613707105583&engine=google_scholar&hl=en",
+        "cites_id": "2098477613707105583"
+      },
+      "year": "2019"
+    },
+    {
+      "title": "Pioneers, Migrants, Looters. Social context of Settlement in the Polish Regained Territories",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:N5tVd3kTz84C",
+      "citation_id": "lo1hhRAAAAAJ:N5tVd3kTz84C",
+      "authors": "I Jakub",
+      "publication": "Kubera J., Skoczylas Ł. (eds.),Contemporary Migrations in the Humanistic …, 2017",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9444577595660490958",
+        "serpapi_link": "https://serpapi.com/search.json?cites=9444577595660490958&engine=google_scholar&hl=en",
+        "cites_id": "9444577595660490958"
+      },
+      "year": "2017"
+    },
+    {
+      "title": "Pamiętnik Heleny Wróblewskiej, mieszkanki Ziem Zachodnich",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:eq2jaN3J8jMC",
+      "citation_id": "lo1hhRAAAAAJ:eq2jaN3J8jMC",
+      "authors": "J Isański",
+      "publication": "Rocznik Ziem Zachodnich 1 (1), 573-596, 2017",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4316773993073624861",
+        "serpapi_link": "https://serpapi.com/search.json?cites=4316773993073624861&engine=google_scholar&hl=en",
+        "cites_id": "4316773993073624861"
+      },
+      "year": "2017"
+    },
+    {
+      "title": "PODRÓŻ POŚLUBNA JAKO RYTUAŁ PRZEJŚCIA–ANALIZA SOCJOLOGICZNA PRZEMIAN ZJAWISKA",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:_FxGoFyzp5QC",
+      "citation_id": "lo1hhRAAAAAJ:_FxGoFyzp5QC",
+      "authors": "J Isański",
+      "publication": "FOLIA TURISTICA, 107, 2013",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4621178084497841408",
+        "serpapi_link": "https://serpapi.com/search.json?cites=4621178084497841408&engine=google_scholar&hl=en",
+        "cites_id": "4621178084497841408"
+      },
+      "year": "2013"
+    },
+    {
+      "title": "“Keeping up with the Joneses.” A sociological content analysis of advertising catalogues with the eye-tracking method",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:Tyk-4Ss8FVUC",
+      "citation_id": "lo1hhRAAAAAJ:Tyk-4Ss8FVUC",
+      "authors": "J Isański, M Leszkowicz",
+      "publication": "Qualitative Sociology Review 7 (2), 85-100, 2011",
+      "cited_by": {
+        "value": 2,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=18292008644142957522",
+        "serpapi_link": "https://serpapi.com/search.json?cites=18292008644142957522&engine=google_scholar&hl=en",
+        "cites_id": "18292008644142957522"
+      },
+      "year": "2011"
+    },
+    {
+      "title": "Auto-biographies of Ukrainian war refugees. From forced migration to anchoring.",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:uJ-U7cs_P_0C",
+      "citation_id": "lo1hhRAAAAAJ:uJ-U7cs_P_0C",
+      "authors": "J Isański, M Nowak",
+      "publication": "Political Science Studies/Studia Politologiczne 68, 2023",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3380600431272285206",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3380600431272285206&engine=google_scholar&hl=en",
+        "cites_id": "3380600431272285206"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Dilemmas faced by Polish migrants in the UK concerning Brexit and return migration",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:nrtMV_XWKgEC",
+      "citation_id": "lo1hhRAAAAAJ:nrtMV_XWKgEC",
+      "authors": "S Fel, J Kozak, M Wodawski, J Isański",
+      "publication": "WORLD• POLITICS 1, 6, 2023",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2985092863110438175",
+        "serpapi_link": "https://serpapi.com/search.json?cites=2985092863110438175&engine=google_scholar&hl=en",
+        "cites_id": "2985092863110438175"
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Społeczno-kulturowe aspekty zmian dzietności i ich konsekwencje dla rozwoju społeczno-gospodarczego",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:dTyEYWd-f8wC",
+      "citation_id": "lo1hhRAAAAAJ:dTyEYWd-f8wC",
+      "authors": "MA Michalski, J Isański",
+      "publication": "Annales. Etyka w życiu gospodarczym 21 (1), 69-88, 2018",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11577674013055224901",
+        "serpapi_link": "https://serpapi.com/search.json?cites=11577674013055224901&engine=google_scholar&hl=en",
+        "cites_id": "11577674013055224901"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "Dzietność jako element życia społecznego we współczesnym społeczeństwie polskim",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:WqliGbK-hY8C",
+      "citation_id": "lo1hhRAAAAAJ:WqliGbK-hY8C",
+      "authors": "J Isański",
+      "publication": "Opuscula Sociologica 23 (1), 25-35, 2018",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1756735528769957179",
+        "serpapi_link": "https://serpapi.com/search.json?cites=1756735528769957179&engine=google_scholar&hl=en",
+        "cites_id": "1756735528769957179"
+      },
+      "year": "2018"
+    },
+    {
+      "title": "Migracje w kształtowaniu krajobrazu społecznego polskich miast",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:W7OEmFMy1HYC",
+      "citation_id": "lo1hhRAAAAAJ:W7OEmFMy1HYC",
+      "authors": "J Isański",
+      "publication": "Człowiek i Społeczeństwo, 115-124, 2014",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8808646202919741268",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8808646202919741268&engine=google_scholar&hl=en",
+        "cites_id": "8808646202919741268"
+      },
+      "year": "2014"
+    },
+    {
+      "title": "Tożsamość w czasach globalizacji",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:eQOLeE2rZwMC",
+      "citation_id": "lo1hhRAAAAAJ:eQOLeE2rZwMC",
+      "authors": "J Isański",
+      "publication": "Człowiek i Społeczeństwo/Uniwersytet im. Adama Mickiewicza w Poznaniu …, 2006",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8729031428011942641",
+        "serpapi_link": "https://serpapi.com/search.json?cites=8729031428011942641&engine=google_scholar&hl=en",
+        "cites_id": "8729031428011942641"
+      },
+      "year": "2006"
+    },
+    {
+      "title": "War refugees and their plans for the future: Hofstede's concept somewhere between Ukraine and Poland",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:ipzZ9siozwsC",
+      "citation_id": "lo1hhRAAAAAJ:ipzZ9siozwsC",
+      "authors": "J Isański, M Nowak",
+      "publication": "Hofstede Matters, 66-80, 2024",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2024"
+    },
+    {
+      "title": "Outdoor fitness activity under COVID-19 restrictions. Wearable devices, images, and posts as sources of information on users",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:t7zJ5fGR-2UC",
+      "citation_id": "lo1hhRAAAAAJ:t7zJ5fGR-2UC",
+      "authors": "J Isański, S Kupiński, M Leszkowicz, W Andrzejewski, A Bykowski",
+      "publication": "Człowiek i Społeczeństwo 55, 115-139, 2023",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Polish migration parochialism hypothesis. Questions about the specificity of the self-organization in the context of international mobility",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:z_wVstp3MssC",
+      "citation_id": "lo1hhRAAAAAJ:z_wVstp3MssC",
+      "authors": "J Isański, M Nowak, J Kozak, J Eade",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Feminized forced migration: Ukrainian war refugees.",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:VLnqNzywnoUC",
+      "citation_id": "lo1hhRAAAAAJ:VLnqNzywnoUC",
+      "authors": "J Isański, J Andrews, A Vacroux, H Vakhitova, V Sereda, M Nowak",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Polish migration parochialism hypothesis. Questions about the specificity of the self-organization in the context of international mobility",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:fEOibwPWpKIC",
+      "citation_id": "lo1hhRAAAAAJ:fEOibwPWpKIC",
+      "authors": "EJ Isański Jakub, Kozak Jarosław, Nowak Marek",
+      "publication": "Review of Religious Research 2023, 1-10, 2023",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2023"
+    },
+    {
+      "title": "Social reception and inclusion of refugees from Ukraine. UKREF Research Report 1 (2022)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:NJ774b8OgUMC",
+      "citation_id": "lo1hhRAAAAAJ:NJ774b8OgUMC",
+      "authors": "J Isański, MA Michalski, M Nowak, V Sereda, H Vakhitova",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2022"
+    },
+    {
+      "title": "Book Review: Magala, Sławomir. 2021.'The Third Enlightenment (or Globalizing Meritocracies)'. Newcastle upon Tyne: Cambridge Scholars Publishing",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:uLbwQdceFCQC",
+      "citation_id": "lo1hhRAAAAAJ:uLbwQdceFCQC",
+      "authors": "J Isański",
+      "publication": "Qualitative Sociology Review 17 (3), 136-140, 2021",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2021"
+    },
+    {
+      "title": "The Lighting the Torches Ceremony A Mechanism for Formulating the'We'(Israelis)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:ZuybSZzF8UAC",
+      "citation_id": "lo1hhRAAAAAJ:ZuybSZzF8UAC",
+      "authors": "AH Hacohen",
+      "publication": "Zakład Studiów nad Dynamiką Społeczną [nowa struktura organizacyjna], 2020",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2020"
+    },
+    {
+      "title": "Rocznik Ziem Zachodnich",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=20&citation_for_view=lo1hhRAAAAAJ:LjlpjdlvIbIC",
+      "citation_id": "lo1hhRAAAAAJ:LjlpjdlvIbIC",
+      "authors": "B Linek, A Sakson, S Szczepański, R Tomkiewicz, M Mazurkiewicz, ...",
+      "publication": "Ośrodek  'Pamięć i Przyszłość', 2017",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2017"
+    },
+    {
+      "title": "Wincenty Kuć,„Pamiętnik”",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:SdhP9T11ey4C",
+      "citation_id": "lo1hhRAAAAAJ:SdhP9T11ey4C",
+      "authors": "J Isański",
+      "publication": "Rocznik Ziem Zachodnich 1 (1), 597-624, 2017",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2017"
+    },
+    {
+      "title": "MIGRACJE I TURYSTYKA. O EKONOMICZNYM TLE I SPOŁECZNO-KULTUROWYCH KONSEKWENCJACH RUCHLIWOŚCI PRZESTRZENNEJ",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:PELIpwtuRlgC",
+      "citation_id": "lo1hhRAAAAAJ:PELIpwtuRlgC",
+      "authors": "J Isański",
+      "publication": "Folia Turistica 38, 11-26, 2016",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2016"
+    },
+    {
+      "title": "Rodziny migracyjne. Transfery społeczne jako przykład konsekwencji migracji dla życia rodzinnego w Polsce",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:_B80troHkn4C",
+      "citation_id": "lo1hhRAAAAAJ:_B80troHkn4C",
+      "authors": "J Isański",
+      "publication": "Dylematy życia rodzinnego. Diagnoza i wsparcie. Szyszko Małgorzata (red …, 2016",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2016"
+    },
+    {
+      "title": "Book Review: Christof Roos (2013), The EU and Immigration Policies. Cracks in the Walls of Fortress Europe?",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:UebtZRa9Y70C",
+      "citation_id": "lo1hhRAAAAAJ:UebtZRa9Y70C",
+      "authors": "J Isański",
+      "publication": "Central and Eastern European Migration Review 4 (1), 98-100, 2015",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2015"
+    },
+    {
+      "title": "Socio-cultural capital of elderly in the contemporary Polish society. Does it pay to invest in social ties?",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:zYLM7Y9cAGgC",
+      "citation_id": "lo1hhRAAAAAJ:zYLM7Y9cAGgC",
+      "authors": "J Isański",
+      "publication": "seniors, 41, 2013",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2013"
+    },
+    {
+      "title": "Social mobility in adolescents. Media impact on adolescents’ path to success",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:qjMakFHDy7sC",
+      "citation_id": "lo1hhRAAAAAJ:qjMakFHDy7sC",
+      "authors": "J Isański",
+      "publication": "Health and Well-Being in Adolescence, 37, 2011",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2011"
+    },
+    {
+      "title": "Media consumption by adolescents in Poland",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:2osOgNQ5qMEC",
+      "citation_id": "lo1hhRAAAAAJ:2osOgNQ5qMEC",
+      "authors": "J Isański, M Anioł, E Glapka, A Kiełkiewicz-Janowiak",
+      "publication": "Health and Well-Being in Adolescence, 19, 2011",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2011"
+    },
+    {
+      "title": "PRZEGLĄD PIŚMIENNICTWA",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:yB1At4FlUx8C",
+      "citation_id": "lo1hhRAAAAAJ:yB1At4FlUx8C",
+      "authors": "V Osińska, M Kowalska, B Bednarek-Michalska, P Malak",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2005"
+    },
+    {
+      "title": "Rola mediów, jako rynku przedstawiania cech gości, w przyciąganiu turystów",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:ufrVoPGSRksC",
+      "citation_id": "lo1hhRAAAAAJ:ufrVoPGSRksC",
+      "authors": "J Isański",
+      "publication": "Człowiek i Społeczeństwo/Uniwersytet im. Adama Mickiewicza w Poznaniu …, 2003",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2003"
+    },
+    {
+      "title": "CZŁOWIEK I SPOŁECZEŃSTWO T. XXI-2003",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:0KyAp5RtaNEC",
+      "citation_id": "lo1hhRAAAAAJ:0KyAp5RtaNEC",
+      "authors": "J ISAŃSKI, TWC GLOBALIZACJI",
+      "publication": "Człowiek i społeczeństwo 21, 69, 1984",
+      "cited_by": {
+        "value": null
+      },
+      "year": "1984"
+    },
+    {
+      "title": "Opinie rodziców na temat programu Rodzina 500+ pięć lat po jego wprowadzeniu",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:2KloaMYe4IUC",
+      "citation_id": "lo1hhRAAAAAJ:2KloaMYe4IUC",
+      "authors": "K Szwarc, J Isański, MA Michalski",
+      "publication": "Rodzina–wyzwania na XXI wiek, 57, 0",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Ukraińcy na polskim rynku pracy iw polskim systemie zabezpieczenia społecznego–aspekty ekonomiczne i społeczne",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:tzM49s52ZIMC",
+      "citation_id": "lo1hhRAAAAAJ:tzM49s52ZIMC",
+      "authors": "J Isański, M Nowak",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Regained Territories",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:5awf1xo2G04C",
+      "citation_id": "lo1hhRAAAAAJ:5awf1xo2G04C",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Pociąg nocny, wagon bez przedziałów",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:JoZmwDi-zQgC",
+      "citation_id": "lo1hhRAAAAAJ:JoZmwDi-zQgC",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Wpływ turystyki na środowisko społeczno-kulturowe. Skutki rozwoju turystyki w środowisku społecznym–szanse i zagrożenia",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:Y5dfb0dijaUC",
+      "citation_id": "lo1hhRAAAAAJ:Y5dfb0dijaUC",
+      "authors": "J Isański",
+      "publication": "UWARUNKOWANIA I PLANY ROZWOJU TURYSTYKI, 27, 0",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Związki turystyki z fotografią w społeczeństwie informacyjnym. Globalne i lokalne przemiany pod wpływem rozwoju nowych technologii informacyjnych i ich wykorzystanie w turystyce",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:WF5omc3nYNoC",
+      "citation_id": "lo1hhRAAAAAJ:WF5omc3nYNoC",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Wincenty Kuć,„Pamiętnik”",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:SdhP9T11ey4C",
+      "citation_id": "lo1hhRAAAAAJ:SdhP9T11ey4C",
+      "authors": "J Isański",
+      "publication": "Rocznik Ziem Zachodnich 1 (1), 597-624, 2017",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2017"
+    },
+    {
+      "title": "MIGRACJE I TURYSTYKA. O EKONOMICZNYM TLE I SPOŁECZNO-KULTUROWYCH KONSEKWENCJACH RUCHLIWOŚCI PRZESTRZENNEJ",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:PELIpwtuRlgC",
+      "citation_id": "lo1hhRAAAAAJ:PELIpwtuRlgC",
+      "authors": "J Isański",
+      "publication": "Folia Turistica 38, 11-26, 2016",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2016"
+    },
+    {
+      "title": "Rodziny migracyjne. Transfery społeczne jako przykład konsekwencji migracji dla życia rodzinnego w Polsce",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:_B80troHkn4C",
+      "citation_id": "lo1hhRAAAAAJ:_B80troHkn4C",
+      "authors": "J Isański",
+      "publication": "Dylematy życia rodzinnego. Diagnoza i wsparcie. Szyszko Małgorzata (red …, 2016",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2016"
+    },
+    {
+      "title": "Book Review: Christof Roos (2013), The EU and Immigration Policies. Cracks in the Walls of Fortress Europe?",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:UebtZRa9Y70C",
+      "citation_id": "lo1hhRAAAAAJ:UebtZRa9Y70C",
+      "authors": "J Isański",
+      "publication": "Central and Eastern European Migration Review 4 (1), 98-100, 2015",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2015"
+    },
+    {
+      "title": "Socio-cultural capital of elderly in the contemporary Polish society. Does it pay to invest in social ties?",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:zYLM7Y9cAGgC",
+      "citation_id": "lo1hhRAAAAAJ:zYLM7Y9cAGgC",
+      "authors": "J Isański",
+      "publication": "seniors, 41, 2013",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2013"
+    },
+    {
+      "title": "Social mobility in adolescents. Media impact on adolescents’ path to success",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:qjMakFHDy7sC",
+      "citation_id": "lo1hhRAAAAAJ:qjMakFHDy7sC",
+      "authors": "J Isański",
+      "publication": "Health and Well-Being in Adolescence, 37, 2011",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2011"
+    },
+    {
+      "title": "Media consumption by adolescents in Poland",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:2osOgNQ5qMEC",
+      "citation_id": "lo1hhRAAAAAJ:2osOgNQ5qMEC",
+      "authors": "J Isański, M Anioł, E Glapka, A Kiełkiewicz-Janowiak",
+      "publication": "Health and Well-Being in Adolescence, 19, 2011",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2011"
+    },
+    {
+      "title": "PRZEGLĄD PIŚMIENNICTWA",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:yB1At4FlUx8C",
+      "citation_id": "lo1hhRAAAAAJ:yB1At4FlUx8C",
+      "authors": "V Osińska, M Kowalska, B Bednarek-Michalska, P Malak",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2005"
+    },
+    {
+      "title": "Rola mediów, jako rynku przedstawiania cech gości, w przyciąganiu turystów",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:ufrVoPGSRksC",
+      "citation_id": "lo1hhRAAAAAJ:ufrVoPGSRksC",
+      "authors": "J Isański",
+      "publication": "Człowiek i Społeczeństwo/Uniwersytet im. Adama Mickiewicza w Poznaniu …, 2003",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2003"
+    },
+    {
+      "title": "CZŁOWIEK I SPOŁECZEŃSTWO T. XXI-2003",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:0KyAp5RtaNEC",
+      "citation_id": "lo1hhRAAAAAJ:0KyAp5RtaNEC",
+      "authors": "J ISAŃSKI, TWC GLOBALIZACJI",
+      "publication": "Człowiek i społeczeństwo 21, 69, 1984",
+      "cited_by": {
+        "value": null
+      },
+      "year": "1984"
+    },
+    {
+      "title": "Opinie rodziców na temat programu Rodzina 500+ pięć lat po jego wprowadzeniu",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:2KloaMYe4IUC",
+      "citation_id": "lo1hhRAAAAAJ:2KloaMYe4IUC",
+      "authors": "K Szwarc, J Isański, MA Michalski",
+      "publication": "Rodzina–wyzwania na XXI wiek, 57, 0",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Ukraińcy na polskim rynku pracy iw polskim systemie zabezpieczenia społecznego–aspekty ekonomiczne i społeczne",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:tzM49s52ZIMC",
+      "citation_id": "lo1hhRAAAAAJ:tzM49s52ZIMC",
+      "authors": "J Isański, M Nowak",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Regained Territories'",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:5awf1xo2G04C",
+      "citation_id": "lo1hhRAAAAAJ:5awf1xo2G04C",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Pociąg nocny, wagon bez przedziałów",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:JoZmwDi-zQgC",
+      "citation_id": "lo1hhRAAAAAJ:JoZmwDi-zQgC",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Wpływ turystyki na środowisko społeczno-kulturowe. Skutki rozwoju turystyki w środowisku społecznym–szanse i zagrożenia",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:Y5dfb0dijaUC",
+      "citation_id": "lo1hhRAAAAAJ:Y5dfb0dijaUC",
+      "authors": "J Isański",
+      "publication": "UWARUNKOWANIA I PLANY ROZWOJU TURYSTYKI, 27, 0",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    },
+    {
+      "title": "Związki turystyki z fotografią w społeczeństwie informacyjnym. Globalne i lokalne przemiany pod wpływem rozwoju nowych technologii informacyjnych i ich wykorzystanie w turystyce",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=lo1hhRAAAAAJ&cstart=40&citation_for_view=lo1hhRAAAAAJ:WF5omc3nYNoC",
+      "citation_id": "lo1hhRAAAAAJ:WF5omc3nYNoC",
+      "authors": "J Isański",
+      "cited_by": {
+        "value": null
+      },
+      "year": ""
+    }
+  ],
+  "cited_by": {
+    "table": [
+      {
+        "citations": {
+          "all": 207,
+          "since_2020": 134
+        }
+      },
+      {
+        "h_index": {
+          "all": 7,
+          "since_2020": 7
+        }
+      },
+      {
+        "i10_index": {
+          "all": 4,
+          "since_2020": 3
+        }
+      }
+    ],
+    "graph": [
+      {
+        "year": 2010,
+        "citations": 1
+      },
+      {
+        "year": 2011,
+        "citations": 2
+      },
+      {
+        "year": 2012,
+        "citations": 7
+      },
+      {
+        "year": 2013,
+        "citations": 4
+      },
+      {
+        "year": 2014,
+        "citations": 6
+      },
+      {
+        "year": 2015,
+        "citations": 11
+      },
+      {
+        "year": 2016,
+        "citations": 8
+      },
+      {
+        "year": 2017,
+        "citations": 6
+      },
+      {
+        "year": 2018,
+        "citations": 8
+      },
+      {
+        "year": 2019,
+        "citations": 12
+      },
+      {
+        "year": 2020,
+        "citations": 13
+      },
+      {
+        "year": 2021,
+        "citations": 9
+      },
+      {
+        "year": 2022,
+        "citations": 13
+      },
+      {
+        "year": 2023,
+        "citations": 32
+      },
+      {
+        "year": 2024,
+        "citations": 52
+      },
+      {
+        "year": 2025,
+        "citations": 13
+      }
+    ]
+  },
+  "co_authors": [
+    {
+      "name": "Viktoriya Sereda",
+      "link": "https://scholar.google.com/citations?user=t3zkSBIAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=t3zkSBIAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "t3zkSBIAAAAJ",
+      "affiliations": "Department of Social Anthropology, Institute of Ethnology, National Academy of Sciences of Ukraine",
+      "email": "Verified email at ucu.edu.ua",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=t3zkSBIAAAAJ&citpid=1"
+    },
+    {
+      "name": "Hanna Vakhitova",
+      "link": "https://scholar.google.com/citations?user=kkuux7IAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=kkuux7IAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "kkuux7IAAAAJ",
+      "affiliations": "Professor of Economics, Kyiv School of Economics",
+      "email": "Verified email at kse.org.ua",
+      "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+    },
+    {
+      "name": "Michał A. Michalski",
+      "link": "https://scholar.google.com/citations?user=ZfIDeGcAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=ZfIDeGcAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "ZfIDeGcAAAAJ",
+      "affiliations": "Uniwersytet im. A. Mickiewicza",
+      "email": "Verified email at amu.edu.pl",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=ZfIDeGcAAAAJ&citpid=1"
+    },
+    {
+      "name": "Alexandra Vacroux",
+      "link": "https://scholar.google.com/citations?user=mWsy80sAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=mWsy80sAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "mWsy80sAAAAJ",
+      "affiliations": "Executive Director, Davis Center for Russian and Eurasian Studies, Harvard University",
+      "email": "Verified email at fas.harvard.edu",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=mWsy80sAAAAJ&citpid=1"
+    },
+    {
+      "name": "Jarosław Kozak",
+      "link": "https://scholar.google.com/citations?user=DMYqSakAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=DMYqSakAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "DMYqSakAAAAJ",
+      "affiliations": "The John Paul II Catholic University of Lublin (KUL)",
+      "email": "Verified email at kul.pl",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=DMYqSakAAAAJ&citpid=2"
+    },
+    {
+      "name": "John Eade",
+      "link": "https://scholar.google.com/citations?user=jQ-I0GoAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=jQ-I0GoAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "jQ-I0GoAAAAJ",
+      "affiliations": "Professor of Sociology and Anthropology",
+      "email": "Verified email at roehampton.ac.uk",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=jQ-I0GoAAAAJ&citpid=2"
+    },
+    {
+      "name": "Renata Seredynska",
+      "link": "https://scholar.google.com/citations?user=8bkghoMAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=8bkghoMAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "8bkghoMAAAAJ",
+      "affiliations": "Assistant Professor, University of Nottingham",
+      "email": "Verified email at nottingham.ac.uk",
+      "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+    },
+    {
+      "name": "Mateusz Leszkowicz",
+      "link": "https://scholar.google.com/citations?user=wqOiUFkAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=wqOiUFkAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "wqOiUFkAAAAJ",
+      "affiliations": "PhD, Faculty of Educational Studies, Adam Mickiewicz University in Poznań",
+      "email": "Verified email at amu.edu.pl",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=wqOiUFkAAAAJ&citpid=4"
+    },
+    {
+      "name": "Jaroslav Dvorak 🥊💥👊🏼",
+      "link": "https://scholar.google.com/citations?user=Z-MEyBAAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=Z-MEyBAAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "Z-MEyBAAAAAJ",
+      "affiliations": "Klaipėda University, Faculty of Social Sciences and Humanities",
+      "email": "Verified email at ku.lt",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=Z-MEyBAAAAAJ&citpid=27"
+    },
+    {
+      "name": "Agnieszka Kiełkiewicz-Janowiak",
+      "link": "https://scholar.google.com/citations?user=HYooChsAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=HYooChsAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "HYooChsAAAAJ",
+      "affiliations": "Adam Mickiewicz University",
+      "email": "Verified email at wa.amu.edu.pl",
+      "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?author_id=lo1hhRAAAAAJ&engine=google_scholar_author&hl=en&start=20"
+  }
+}

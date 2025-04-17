@@ -1,14 +1,21 @@
 import "./assets/main.css";
 
-import { createApp } from "vue";
+import { ViteSSG } from "vite-ssg";
 import { createPinia } from "pinia";
-
+import { createHead } from "@vueuse/head";
 
 import App from "./App.vue";
-import router from "./router";
+import { routes } from "./router";
 
-const app = createApp(App);
+export const createApp = ViteSSG(App, { routes }, ({ app, router, isClient }) => {
+  app.use(createPinia());
+  app.use(createHead());
 
-app.use(router);
-app.use(createPinia());
-app.mount("#app");
+  // Generowanie sitemap tylko podczas SSR (czyli build)
+  if (import.meta.env.SSR) {
+    generateSitemap({
+      hostname: "https://jakubisanski.pl",
+      routes,
+    });
+  }
+});

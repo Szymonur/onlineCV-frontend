@@ -10,12 +10,4 @@ import { routes } from "./router";
 export const createApp = ViteSSG(App, { routes }, ({ app, routes }) => {
   app.use(createPinia());
   app.use(createHead());
-
-  // Generowanie sitemap tylko podczas SSR (czyli build)
-  if (import.meta.env.SSR) {
-    generateSitemap({
-      hostname: "https://jakubisanski.pl",
-      routes,
-    });
-  }
 });

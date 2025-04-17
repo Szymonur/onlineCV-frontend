@@ -2,14 +2,16 @@ import { defineStore } from "pinia";
 
 export const useLanguageStore = defineStore("language", {
   state: () => ({
-    locale: localStorage.getItem("locale") || "en",
+    locale: typeof window !== "undefined" ? localStorage.getItem("locale") || "en" : "en",
     translations: {},
   }),
 
   actions: {
     setLanguage(lang) {
       this.locale = lang;
-      localStorage.setItem("locale", lang);
+      if (typeof window !== "undefined") {
+        localStorage.setItem("locale", lang);
+      }
       this.loadTranslations(lang);
     },
 

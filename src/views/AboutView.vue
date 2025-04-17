@@ -133,9 +133,6 @@ h1 {
 .icon {
   font-size: 1.2rem;
 }
-a:hover .icon {
-  color: #0056b3;
-}
 .c-about-top-contact img {
   width: 20px;
   height: 20px;

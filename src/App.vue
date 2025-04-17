@@ -10,8 +10,11 @@ import Footer from "./components/Footer.vue";
 useHead({
   title: "Jakub Isański | UAM Professor ",
   meta: [
-    
-  ]
+    {
+      name: 'description',
+      content: 'Test desc',
+    },
+  ],
 })
 
 // Inicjalizujemy store

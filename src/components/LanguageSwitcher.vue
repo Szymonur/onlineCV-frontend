@@ -71,7 +71,10 @@ onUnmounted(() => {
   border-radius: 5px;
   font-weight: bold;
 }
-
+.current-language :deep(svg) {
+  font-size: 1rem;
+  vertical-align: middle;
+}
 .current-language:hover {
   background-color: #ddd;
 }

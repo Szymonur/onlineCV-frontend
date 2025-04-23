@@ -31,8 +31,8 @@ export const useArticlesStore = defineStore("articles", {
 
         const result = await response.json();
         this.data = result.data.sort((a, b) => {
-          const aC = a.attributes.citations || {};
-          const bC = b.attributes.citations || {};
+          const aC = a.citations || {};
+          const bC = b.citations || {};
 
           const aGS = aC.googleScholar || 0;
           const bGS = bC.googleScholar || 0;

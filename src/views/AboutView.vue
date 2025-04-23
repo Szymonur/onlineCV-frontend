@@ -37,7 +37,7 @@ useHead({
     <div class="c-about-container">
       <div v-if="dataStore.loading"></div>
       <div v-else-if="dataStore.error" class="error">Błąd: {{ dataStore.error }}</div>
-      <div v-else-if="!dataStore.hasData">Brak dostępnych danych.</div>
+      <div v-else-if="!dataStore.hasData"></div>
       <div v-else class="c-about-content">
         <div class="c-about-top">
           <div class="c-about-img">

@@ -35,9 +35,9 @@ const t = (key) => languageStore.currentTranslation[key] || key;
       <div class="article-grid sub-header">
         <div></div>
         <div></div>
+        <div class="text-center mobile-do-not-display">GS</div>
         <div class="text-center mobile-do-not-display">WoS</div>
         <div class="text-center mobile-do-not-display">Scopus</div>
-        <div class="text-center mobile-do-not-display">GS</div>
       </div>
 
       <!-- Articles list -->
@@ -53,10 +53,9 @@ const t = (key) => languageStore.currentTranslation[key] || key;
         <div>
           <WordCloud v-if="article.keywords" :keywords="article.keywords" />
         </div>
-
+        <div class="text-center mobile-do-not-display">{{ article.citations.googleScholar }}</div>
         <div class="text-center mobile-do-not-display">{{ article.citations.webOfScience }}</div>
         <div class="text-center mobile-do-not-display">{{ article.citations.scopus }}</div>
-        <div class="text-center mobile-do-not-display">{{ article.citations.googleScholar }}</div>
 
         <div class="mobile-do-not-display text-center">
           <p>{{ article.year }}</p>

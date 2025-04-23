@@ -32,7 +32,11 @@ export const useInvitedLecturesStore = defineStore("invitedLecture", {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const result = await response.json();
-        this.data = result.data;
+        this.data = result.data.sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB - dateA;
+        });
       } catch (err) {
         this.error = err.message;
       } finally {

@@ -18,6 +18,12 @@ a {
 a:hover {
   text-decoration: none;
 }
+svg[data-icon="chevron-down"] {
+  font-size: 1rem; /* lub 1rem, zależnie od designu */
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+}
 .wrapper {
   display: flex;
   flex-direction: column;

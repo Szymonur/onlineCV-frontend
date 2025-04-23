@@ -1,7 +1,7 @@
 <template>
   <div class="language-switcher" ref="dropdownRef">
     <button class="current-language" @click="toggleDropdown">
-      {{ currentLanguage.label }} <font-awesome-icon :icon="faChevronDown" style="font-size: 0.75rem" />
+      {{ currentLanguage.label }} <font-awesome-icon :icon="faChevronDown" style="font-size: 1rem" />
     </button>
     <ul v-if="isOpen" class="dropdown">
       <li v-for="lang in languages" :key="lang.code" @click="changeLanguage(lang.code)">

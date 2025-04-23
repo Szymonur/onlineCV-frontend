@@ -32,8 +32,8 @@ export const useEducationStore = defineStore("education", {
         const result = await response.json();
         const sortedData = result.data.sort((a, b) => b.year - a.year);
 
-        this.main = sortedData.filter((item) => !item.if_additional);
-        this.additional = sortedData.filter((item) => item.if_additional);
+        this.main = sortedData.filter((item) => !item.is_additional);
+        this.additional = sortedData.filter((item) => item.is_additional);
       } catch (err) {
         this.error = err.message;
       } finally {

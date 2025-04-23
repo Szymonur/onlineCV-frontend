@@ -31,9 +31,15 @@ export const useConferenceStore = defineStore("conference", {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const result = await response.json();
-        this.data = result.data;
+
+        // Sortowanie po dacie (od najnowszej do najstarszej)
+        this.data = result.data.sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB - dateA;
+        });
       } catch (err) {
-        this.error = err.message;
+        this.error = erdr.message;
       } finally {
         this.loading = false;
       }

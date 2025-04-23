@@ -32,7 +32,22 @@ export const useResearchGrantsStore = defineStore("researchGrant", {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const result = await response.json();
-        this.data = result.data;
+
+        this.data = result.data.sort((a, b) => {
+          const parseDate = (entry) => {
+            const match = entry.date.match(/^(\d{4})(?:-(\d{4}))?$/);
+            if (!match) return { start: 0, end: 0 };
+            const start = parseInt(match[1]);
+            const end = match[2] ? parseInt(match[2]) : start;
+            return { start, end };
+          };
+
+          const aDate = parseDate(a);
+          const bDate = parseDate(b);
+
+          if (bDate.end !== aDate.end) return bDate.end - aDate.end;
+          return aDate.start - bDate.start;
+        });
       } catch (err) {
         this.error = err.message;
       } finally {

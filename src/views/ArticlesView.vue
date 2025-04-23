@@ -18,56 +18,51 @@ const t = (key) => languageStore.currentTranslation[key] || key;
 
 <template>
   <div class="c-articles">
-    <div>
-      <div v-if="ArticlesStore.loading"></div>
-      <div v-else-if="ArticlesStore.error">{{ ArticlesStore.error }}</div>
-      <div v-else class="articles-container">
-        <ul>
-          <li class="article-card">
-            <div>
-              <h1>{{ t("articles") }}</h1>
-            </div>
-            <div class="article-card-right-header mobile-do-not-display">
-              <!-- <div>
-                <p>{{ t('cited_by') }}</p>
-              </div> -->
-              <div>
-                <p>{{ t("year") }}</p>
-              </div>
-            </div>
-          </li>
-          <li v-for="article in ArticlesStore.data" :key="article.citation_id" class="article-card">
-            <div>
-              <h2>
-                <a :href="article.link" target="_blank">{{ article.title }}</a>
-              </h2>
-              <p>{{ article.authors }}</p>
-              <p>{{ article.publication }}</p>
-            </div>
-            <div class="article-card-right">
-              <!-- <div>
-                <p>
-                  <a
-                    class="article-card-right-cited"
-                    :href="article.cited_by.link"
-                    target="_blank"
-                    >{{ article.cited_by.value }}</a
-                  >
-                </p>
-              </div> -->
-              <div>
-                <!-- Word Cloud for Each Article -->
-                <WordCloud v-if="article.keywords" :keywords="article.keywords" />
-              </div>
-              <div class="mobile-do-not-display">
-                <p>{{ article.year }}</p>
-              </div>
-            </div>
-          </li>
-        </ul>
+    <div v-if="ArticlesStore.loading"></div>
+    <div v-else-if="ArticlesStore.error">{{ ArticlesStore.error }}</div>
+    <div v-else class="articles-container">
+      <!-- Header: First row -->
+      <div class="article-grid header">
+        <h1>{{ t("articles") }}</h1>
+        <div></div>
+        <div class="citation-header bottom-align mobile-do-not-display" style="grid-column: span 3">
+          {{ t("cited_by") }}
+        </div>
+        <div class="bottom-align mobile-do-not-display">{{ t("year") }}</div>
+      </div>
+
+      <!-- Sub-header: Citation types -->
+      <div class="article-grid sub-header">
+        <div></div>
+        <div></div>
+        <div class="text-cente mobile-do-not-display">WoS</div>
+        <div class="text-cente mobile-do-not-display">Scopus</div>
+        <div class="text-cente mobile-do-not-display">GS</div>
+      </div>
+
+      <!-- Articles list -->
+      <div v-for="article in ArticlesStore.data" :key="article.title" class="article-grid row">
+        <div>
+          <h2>
+            <a :href="article.link" target="_blank">{{ article.title }}</a>
+          </h2>
+          <p>{{ article.authors }}</p>
+          <p>{{ article.description }}</p>
+        </div>
+
+        <div>
+          <WordCloud v-if="article.keywords" :keywords="article.keywords" />
+        </div>
+
+        <div class="text-center mobile-do-not-display">{{ article.citations.webOfScience }}</div>
+        <div class="text-center mobile-do-not-display">{{ article.citations.scopus }}</div>
+        <div class="text-center mobile-do-not-display">{{ article.citations.googleScholar }}</div>
+
+        <div class="mobile-do-not-display text-center">
+          <p>{{ article.year }}</p>
+        </div>
       </div>
     </div>
-    <!-- <CitationsSideBar /> -->
   </div>
 </template>
 
@@ -77,8 +72,25 @@ const t = (key) => languageStore.currentTranslation[key] || key;
   flex-direction: row;
   align-items: start;
   gap: 2rem;
+  width: 100%;
 }
-
+.articles-container {
+  width: 100%;
+  padding: 40px 0 40px 40px;
+}
+.text-center {
+  text-align: center;
+}
+.article-citations {
+  display: flex;
+  gap: 1rem;
+}
+.bottom-align {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
 .article-card {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
@@ -113,6 +125,38 @@ const t = (key) => languageStore.currentTranslation[key] || key;
 .article-card-right-cited {
   font-size: 19px;
 }
+.article-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.2fr 0.2fr 0.2fr 0.5fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  align-items: center;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.article-grid.header {
+  font-weight: bold;
+}
+
+.article-grid.sub-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding: 0 5px;
+}
+
+.citation-header {
+  text-align: center;
+}
+
+.article-grid h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.article-grid a {
+  color: var(--link);
+  text-decoration: none;
+}
 
 h1 {
   padding: 15px 40px 0 0px;
@@ -137,6 +181,23 @@ h1 {
   .article-card-right {
     justify-content: center;
     align-items: center;
+  }
+  .article-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .article-grid.sub-header {
+    display: none;
+  }
+
+  .mobile-do-not-display {
+    display: none;
+  }
+
+  .article-citations {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 </style>

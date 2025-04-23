@@ -1,5 +1,5 @@
 <script setup>
-import PublicationsSideNav from '@/components/PublicationsSideNav.vue'
+import PublicationsSideNav from "@/components/PublicationsSideNav.vue";
 </script>
 
 <template>

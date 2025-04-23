@@ -19,7 +19,7 @@ const isMenuOpen = ref(false);
 
     <div class="menu-links" :class="{ open: isMenuOpen }">
       <RouterLink to="/about" @click="isMenuOpen = false">{{ t("about") }}</RouterLink>
-      <RouterLink to="/publications" @click="isMenuOpen = false">{{ t("publicatons") }}</RouterLink>
+      <RouterLink to="/publications" @click="isMenuOpen = false">{{ t("publications") }}</RouterLink>
       <RouterLink to="/research_grants" @click="isMenuOpen = false">{{ t("research_grants") }} </RouterLink>
       <RouterLink to="/conferences" @click="isMenuOpen = false">{{ t("conferences") }}</RouterLink>
       <RouterLink to="/education" @click="isMenuOpen = false">{{ t("education") }}</RouterLink>

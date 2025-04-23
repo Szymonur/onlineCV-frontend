@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useArticlesStore = defineStore("articlesStore", {
+export const useArticlesStore = defineStore("articles", {
   state: () => ({
     data: [],
     loading: false,
@@ -12,16 +12,26 @@ export const useArticlesStore = defineStore("articlesStore", {
   },
 
   actions: {
-    async fetchData(isLanguageChanged) {
-      if (this.hasData && !isLanguageChanged) return;
+    async fetchData() {
+      if (this.hasData) return;
       this.loading = true;
       this.error = null;
       try {
-        const response = await fetch("/googleScholar.json");
+        const response = await fetch(
+          `${import.meta.env.VITE_SERWER}/api/articles?populate=citations&populate=keywords`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN_READ_ONLY}`,
+            },
+          }
+        );
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const result = await response.json();
-        this.data = result.articles;
+
+        this.data = result.data;
       } catch (err) {
         this.error = err.message;
       } finally {

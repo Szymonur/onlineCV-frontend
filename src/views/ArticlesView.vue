@@ -35,9 +35,9 @@ const t = (key) => languageStore.currentTranslation[key] || key;
       <div class="article-grid sub-header">
         <div></div>
         <div></div>
-        <div class="text-cente mobile-do-not-display">WoS</div>
-        <div class="text-cente mobile-do-not-display">Scopus</div>
-        <div class="text-cente mobile-do-not-display">GS</div>
+        <div class="text-center mobile-do-not-display">WoS</div>
+        <div class="text-center mobile-do-not-display">Scopus</div>
+        <div class="text-center mobile-do-not-display">GS</div>
       </div>
 
       <!-- Articles list -->

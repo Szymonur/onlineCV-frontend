@@ -30,8 +30,26 @@ export const useArticlesStore = defineStore("articles", {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const result = await response.json();
+        this.data = result.data.sort((a, b) => {
+          const aC = a.attributes.citations || {};
+          const bC = b.attributes.citations || {};
 
-        this.data = result.data;
+          const aGS = aC.googleScholar || 0;
+          const bGS = bC.googleScholar || 0;
+
+          const aWoS = aC.webOfScience || 0;
+          const bWoS = bC.webOfScience || 0;
+
+          const aScopus = aC.scopus || 0;
+          const bScopus = bC.scopus || 0;
+
+          // sortuj po googleScholar
+          if (aGS !== bGS) return bGS - aGS;
+          // jeśli równe, to po webOfScience
+          if (aWoS !== bWoS) return bWoS - aWoS;
+          // jeśli dalej równe, to po scopus
+          return bScopus - aScopus;
+        });
       } catch (err) {
         this.error = err.message;
       } finally {

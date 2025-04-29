@@ -26,7 +26,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
         <h1>{{ t("articles") }}</h1>
         <div></div>
         <div class="citation-header bottom-align mobile-do-not-display" style="grid-column: span 3">
-          {{ t("cited_by") }}
+          {{ t("citation_count") }}
         </div>
         <div class="bottom-align mobile-do-not-display">{{ t("year") }}</div>
       </div>

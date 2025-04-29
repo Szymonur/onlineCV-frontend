@@ -60,6 +60,7 @@ const scrollToContent = () => {
                 <h2>
                   {{ conference.name }}
                 </h2>
+                <p class="conference-location">{{ conference.location }}</p>
                 <p>{{ conference.topic }}</p>
               </div>
               <div class="conference-card-right">
@@ -104,6 +105,9 @@ const scrollToContent = () => {
 .conference-card-right {
   display: flex;
   gap: 2rem;
+}
+.conference-location {
+  color: #646464;
 }
 .conference-card-right-header {
   gap: 5rem;

@@ -89,7 +89,7 @@ const t = (key) => languageStore.currentTranslation[key] || key;
               <ul>
                 <li v-for="item in group.items" :key="item.id">
                   <p>{{ item.name }}</p>
-                  <a :href="item.link" @click.prevent="handleNavClick($event, slug)">Sylabus</a>
+                  <a :href="item.link" target="_blank">Sylabus</a>
                 </li>
               </ul>
             </div>

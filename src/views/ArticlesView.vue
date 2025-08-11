@@ -68,13 +68,13 @@
                     />
                 </div>
                 <div class="text-center mobile-do-not-display">
-                    {{ article.citations?.googleScholar || "no data" }}
+                    {{ article.citations?.googleScholar || "N/A" }}
                 </div>
                 <div class="text-center mobile-do-not-display">
-                    {{ article.citations?.webOfScience || "no data" }}
+                    {{ article.citations?.webOfScience || "N/A" }}
                 </div>
                 <div class="text-center mobile-do-not-display">
-                    {{ article.citations?.scopus || "no data" }}
+                    {{ article.citations?.scopus || "N/A" }}
                 </div>
 
                 <div class="mobile-do-not-display text-center">

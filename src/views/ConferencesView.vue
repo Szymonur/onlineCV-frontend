@@ -129,11 +129,17 @@ const scrollToContent = () => {
   width: 77px;
 }
 .conferences-baner {
-  width: 100%;
-  position: relative; /* To enable positioning of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+    position: relative; /* To enable positioning of the button */
 }
-.conferences-baner img {
-  max-width: 100%;
+ .conferences-baner img {
+    width: 100%;
+    object-fit: cover;
 }
 h1 {
   padding: 15px 40px 0 0px;
